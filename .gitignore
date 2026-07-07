@@ -1,0 +1,34 @@
+# ===== 데이터 (개인정보 · 대용량) — 절대 커밋 금지 =====
+# atopy/ = 환자 원본 의료 이미지(개인정보), dataset_* = 학습 데이터셋
+atopy/
+dataset_all/
+dataset_face/
+dataset_face_det/
+dataset_lesion/
+dataset_face_strat_merged/
+dataset_lesion_merged/
+# 병합 검수용 산출물
+merge_review/
+
+# ===== 학습 산출물 (runs) =====
+# runs/ 는 기본 제외하되, 데모용 best 체크포인트만 git add -f 로 강제 추가(LFS)
+runs/
+**/runs/
+
+# ===== 캐시 / 임시 =====
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
+*.log
+.claude/
+
+# 로컬 실행 시 사용자가 두는 임시 업로드/출력
+/tmp_uploads/
+/app/outputs/
+
+#
+setup.sh

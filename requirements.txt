@@ -1,0 +1,13 @@
+# Streamlit 데모 실행에 필요한 최소 의존성.
+# torch/torchvision 은 환경(GPU/CUDA)에 맞는 버전을 별도로 설치하는 것을 권장.
+streamlit>=1.30
+torch>=2.1
+torchvision>=0.16
+segmentation-models-pytorch>=0.3
+timm>=1.0            # MobileNetV4 분류 백본 · HRNet(tu-) 분할 인코더
+pillow>=10.0
+numpy>=1.24
+
+# --- 학습(train.py) 을 재현할 때 추가로 필요 ---
+# albumentations>=2.0
+# opencv-python-headless
