@@ -33,7 +33,7 @@ def tiled_logits(model, img, tile=512, stride=384, use_amp=False):
     for y in _starts(H, tile, stride):
         for x in _starts(W, tile, stride):
             patch = img[:, :, y:y + tile, x:x + tile]
-            with torch.amp.autocast("cuda", enabled=use_amp):
+            with torch.cuda.amp.autocast(enabled=use_amp):
                 out = model(patch).float()
             acc[:, :, y:y + tile, x:x + tile] += torch.sigmoid(out)
             cnt[:, :, y:y + tile, x:x + tile] += 1.0

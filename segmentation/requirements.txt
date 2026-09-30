@@ -1,0 +1,25 @@
+# 세그멘테이션 학습/추론 의존성 (segmentation/)
+#
+# 설치:
+#   pip install -r segmentation/requirements.txt
+#
+# 포함 범위: segmentation/ 전체 (encoder_decoder/, unext/ 및 공용 모듈)
+#   - encoder_decoder/ : smp(U-Net++/DeepLabV3+/MAnet 등) 학습·추론·평가
+#   - unext/           : UNeXt (archs.py, 순수 torch + timm)
+#   - 공용             : dataset/augment/losses/metrics/tiling/postprocess/visualize
+#
+# 주의:
+#   - GPU 학습용 torch 는 CUDA 버전에 맞는 빌드를 https://pytorch.org 에서 별도 설치 권장
+#     (이 저장소는 .venv-train 에 torch 2.2.2+cu121 설치되어 있음)
+#   - smp 의 tu-* 인코더(tu-hrnet_w18 등)는 timm 을 통해 로드된다.
+
+torch>=2.1.0
+torchvision>=0.16.0                 # infer_to_labels.py (NMS/box ops)
+segmentation-models-pytorch>=0.5.0  # model.py: U-Net++/U-Net/MAnet/DeepLabV3+
+timm>=1.0.0                         # smp 의 tu-* 인코더 백본
+albumentations>=1.4.0               # augment.py: 학습 증강 파이프라인
+opencv-python-headless>=4.8.0       # 폴리곤/컨투어 처리 (GUI 불필요 -> headless)
+scipy>=1.10.0                       # merge_face_fragments.py
+matplotlib>=3.7.0                   # visualize.py, viz_failures.py, postprocess.py
+numpy>=1.24.0
+Pillow>=10.0.0

@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+.DS_Store
+npm-debug.*
+yarn-error.*
+
+# native projects (EAS/prebuild 가 생성)
+/android
+/ios

@@ -63,6 +63,9 @@ def parse_args():
     p.add_argument("--name", type=str, default="unetpp_effb3")
     p.add_argument("--project", type=str, default=str(ROOT / "runs"))
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--patience", type=int, default=0,
+                   help="early stopping: val Dice 가 N epoch 연속 갱신 안 되면 종료. "
+                        "0=끄기(전체 epoch 학습)")
     # --- 모델 선택 ---
     p.add_argument("--encoder", type=str, default="efficientnet-b3",
                    help="smp 인코더(efficientnet-b3/b0, resnet34 ...). "
@@ -178,7 +181,7 @@ def evaluate(model, loader, device, use_amp=False, tile=0, stride=0):
             # loader batch=1 가정. 전체이미지 타일드 추론.
             logits = tiled_logits(model, img, tile=tile, stride=stride, use_amp=use_amp)
         else:
-            with torch.amp.autocast("cuda", enabled=use_amp):
+            with torch.cuda.amp.autocast(enabled=use_amp):
                 logits = model(img)
         s = seg_scores(logits.float(), mask)
         bs = img.size(0)
@@ -242,7 +245,7 @@ def main():
         optimizer, T_max=args.epochs, eta_min=1e-6)
 
     use_amp = args.amp and device.type == "cuda"
-    scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
+    scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
     print(f"[mem] AMP={'on' if use_amp else 'off'}  accum={args.accum}  "
           f"실효배치={args.batch * args.accum}")
 
@@ -257,6 +260,10 @@ def main():
         print(f"[warmup] 인코더 동결 {args.freeze_encoder} epoch")
 
     best_dice = -1.0
+    best_epoch = 0
+    epochs_no_improve = 0
+    if args.patience > 0:
+        print(f"[early stop] patience={args.patience} (val Dice 미갱신 {args.patience}ep 시 종료)")
     for epoch in range(1, args.epochs + 1):
         if args.freeze_encoder > 0 and epoch == args.freeze_encoder + 1:
             set_encoder_requires_grad(model, True)
@@ -267,7 +274,7 @@ def main():
         optimizer.zero_grad()
         for step, (img, mask, _) in enumerate(tr_loader):
             img, mask = img.to(device), mask.to(device)
-            with torch.amp.autocast("cuda", enabled=use_amp):
+            with torch.cuda.amp.autocast(enabled=use_amp):
                 logits = model(img)
                 loss = criterion(logits, mask)
             scaler.scale(loss / args.accum).backward()
@@ -294,9 +301,20 @@ def main():
                     "args": vars(args)}, out_dir / "checkpoint_last.pth")
         if val["dice"] > best_dice:
             best_dice = val["dice"]
+            best_epoch = epoch
+            epochs_no_improve = 0
             torch.save({"epoch": epoch, "model": model.state_dict(), "val": val,
                         "args": vars(args)}, out_dir / "checkpoint_best.pth")
             print(f"    -> best 갱신 (val Dice={best_dice:.4f})", flush=True)
+        else:
+            epochs_no_improve += 1
+            if args.patience > 0:
+                print(f"    (미갱신 {epochs_no_improve}/{args.patience}, "
+                      f"best={best_dice:.4f}@ep{best_epoch})", flush=True)
+                if epochs_no_improve >= args.patience:
+                    print(f"[early stop] epoch {epoch}: {args.patience}ep 연속 미갱신 -> 종료 "
+                          f"(best val Dice={best_dice:.4f}@ep{best_epoch})", flush=True)
+                    break
 
     ckpt = torch.load(out_dir / "checkpoint_best.pth", map_location=device)
     model.load_state_dict(ckpt["model"])

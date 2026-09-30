@@ -1,0 +1,94 @@
+{
+  "name": "mnv3s_224_0.2",
+  "task": "classification",
+  "backbone": "mobilenetv3_small_100",
+  "imgsz": 224,
+  "num_outputs": 21,
+  "tasks": [
+    {
+      "name": "severity",
+      "title": "Severity (IGA)",
+      "title_ko": "중증도(IGA)",
+      "labels": [
+        "Clear",
+        "Almost Clear",
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "offset": 0,
+      "size": 5
+    },
+    {
+      "name": "erythema",
+      "title": "Erythema",
+      "title_ko": "홍반",
+      "labels": [
+        "None",
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "offset": 5,
+      "size": 4
+    },
+    {
+      "name": "papulation",
+      "title": "Papulation",
+      "title_ko": "구진",
+      "labels": [
+        "None",
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "offset": 9,
+      "size": 4
+    },
+    {
+      "name": "excoriation",
+      "title": "Excoriation",
+      "title_ko": "찰상",
+      "labels": [
+        "None",
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "offset": 13,
+      "size": 4
+    },
+    {
+      "name": "lichenification",
+      "title": "Lichenification",
+      "title_ko": "태선화",
+      "labels": [
+        "None",
+        "Mild",
+        "Moderate",
+        "Severe"
+      ],
+      "offset": 17,
+      "size": 4
+    }
+  ],
+  "mean": [
+    0.48500001430511475,
+    0.4560000002384186,
+    0.4059999883174896
+  ],
+  "std": [
+    0.2290000021457672,
+    0.2240000069141388,
+    0.22499999403953552
+  ],
+  "layout": "NHWC",
+  "input": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "io_dtype": "float32",
+  "activation": "softmax_per_task"
+}

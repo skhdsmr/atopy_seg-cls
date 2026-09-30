@@ -1,0 +1,27 @@
+{
+  "name": "effb0_unetpp_256",
+  "imgsz": 256,
+  "nclass": 1,
+  "arch": "unetplusplus",
+  "encoder": "efficientnet-b0",
+  "mean": [
+    0.48500001430511475,
+    0.4560000002384186,
+    0.4059999883174896
+  ],
+  "std": [
+    0.2290000021457672,
+    0.2240000069141388,
+    0.22499999403953552
+  ],
+  "layout": "NHWC",
+  "input": [
+    1,
+    256,
+    256,
+    3
+  ],
+  "io_dtype": "float32",
+  "activation": "sigmoid",
+  "threshold": 0.5
+}

@@ -32,3 +32,29 @@ venv/
 
 #
 setup.sh
+# ===== 추가: 환자 이미지 · 데이터셋 · 가중치 · 환경 (대용량/개인정보) =====
+.venv-train/
+dataset_*/
+atopy_crop_masks/
+안면부 피부질환 데이터/
+augment_sweep/
+diffusion/
+gan/
+streamlit/
+node_modules/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+
+# 실험 산출물
+runs_*/
+**/runs_*/
+*.db
+logs/
+**/logs/

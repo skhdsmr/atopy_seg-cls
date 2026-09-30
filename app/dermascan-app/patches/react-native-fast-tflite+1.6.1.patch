@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native-fast-tflite/cpp/TensorflowPlugin.cpp b/node_modules/react-native-fast-tflite/cpp/TensorflowPlugin.cpp
+index 36e1887..50825d7 100644
+--- a/node_modules/react-native-fast-tflite/cpp/TensorflowPlugin.cpp
++++ b/node_modules/react-native-fast-tflite/cpp/TensorflowPlugin.cpp
+@@ -85,6 +85,9 @@ void TensorflowPlugin::installToRuntime(jsi::Runtime& runtime,
+ 
+               // Create TensorFlow Interpreter
+               auto options = TfLiteInterpreterOptionsCreate();
++              // [DermaScan patch] CPU 추론 스레드 수 고정(배포 기본값). 값 변경 후
++              //   npx patch-package react-native-fast-tflite 로 패치를 갱신하고 재빌드.
++              TfLiteInterpreterOptionsSetNumThreads(options, 1);
+ 
+               switch (delegateType) {
+                 case Delegate::CoreML: {

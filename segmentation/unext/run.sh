@@ -16,17 +16,17 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # --- 하이퍼파라미터 (환경변수로 덮어쓰기 가능) -------------------------------
-DATA="${DATA:-../../dataset_face_strat_merged}"   # 학습 대상 dataset_* 루트
+DATA="${DATA:-../../dataset_deeplab}"   # 학습 대상 dataset_* 루트
 EPOCHS="${EPOCHS:-100}"           # 학습 epoch
 BATCH="${BATCH:-8}"               # 배치 크기
 IMGSZ="${IMGSZ:-512}"             # 입력 크기(32의 배수)
 LR="${LR:-0.001}"                 # AdamW 초기 학습률
 DEVICE="${DEVICE:-cuda}"          # cuda 또는 cpu
-NAME="${NAME:-unext_face_crop512_tv}"        # 실험 이름 -> runs/<NAME>
+NAME="${NAME:-unext_face_new}"        # 실험 이름 -> runs/<NAME>
 AUG="${AUG:-on}"                  # on=온라인 증강 사용, off=끄고 baseline
 LOSS="${LOSS:-bcedice}"           # bcedice(baseline) 또는 tversky
 ALPHA="${ALPHA:-0.5}"             # Tversky alpha(FP 벌점). beta=1-alpha
-CROP="${CROP:-512}"                 # >0 이면 crop 학습 + 타일드 평가 (작은 병변용, 예: 512)
+CROP="${CROP:-0}"                 # >0 이면 crop 학습 + 타일드 평가 (작은 병변용, 예: 512)
 CROP_POS="${CROP_POS:-0.7}"       # 병변 포함 crop 비율
 
 # AUG=off 면 --no_aug 플래그 전달

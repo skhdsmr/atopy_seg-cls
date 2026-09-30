@@ -1,0 +1,17 @@
+# 질환 6-way 분류 학습 의존성 (classification_disease/)
+#
+# 설치:
+#   pip install -r classification_disease/requirements.txt
+#
+# 주의:
+#   - GPU 학습용 torch 는 CUDA 버전에 맞는 빌드를 https://pytorch.org 에서 별도 설치 권장
+#     (이 저장소는 .venv-train 에 torch 2.2.2+cu121 설치되어 있음)
+#   - 학습 코드는 torch 2.2 ~ 2.5 모두 호환(AMP GradScaler API 버전 분기 처리됨)
+#   - timm 은 사전학습 가중치 다운로드에 인터넷 필요
+#   - make_dataset_disease.py 는 표준 라이브러리만 쓴다(torch/timm 불필요)
+
+torch>=2.1.0
+torchvision>=0.16.0                 # train.py (transforms)
+timm>=1.0.0                         # DiseaseNet 백본(effb0/efflite0/mnv3s/mnv4s/mnv4m)
+numpy>=1.24.0
+Pillow>=10.0.0

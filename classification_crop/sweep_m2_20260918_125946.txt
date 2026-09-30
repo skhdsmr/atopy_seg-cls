@@ -1,0 +1,1487 @@
+
+######## [1/4] M2_ocnnit_s42 ########
+[dataset] 샘플 1400개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[ibb] alpha=0.5 cap=4.0x min_cell=5 edge_V>=0.25 edge_loss=pair
+[ibb] 엣지 4개: seve-eryt(V=0.47), seve-papu(V=0.33), eryt-papu(V=0.32), seve-exco(V=0.26)
+[ibb] 에폭당 배치 60 (step1_mult=1.0) (Step1 40 + Step2 20, 자연분포 에폭=44)
+[exp] bbox  [model] pvtv2b0 (pvt_v2_b0)  params=3.6M
+[loss] head=CORN(순서형)  결합=Kendall σ 자동가중  ls=0.1
+[Ep   1/100 warmup] tr=1.473 va=1.159 | score=0.300 (mean_QWK=0.300)
+    QWK: seve=0.300 eryt=0.119 papu=0.276 exco=0.322 lich=0.485
+    ±1 : seve=0.955 eryt=0.995 papu=0.955 exco=0.950 lich=0.935   acc: seve=0.440 eryt=0.555 papu=0.505 exco=0.485 lich=0.675
+    σ  : seve=0.99 eryt=0.99 papu=0.99 exco=0.99 lich=0.99
+    -> best 갱신 (score=0.300)
+[Ep   2/100 warmup] tr=1.145 va=0.994 | score=0.570 (mean_QWK=0.505)
+    QWK: seve=0.678 eryt=0.459 papu=0.336 exco=0.559 lich=0.491
+    ±1 : seve=0.990 eryt=1.000 papu=0.970 exco=0.965 lich=0.935   acc: seve=0.660 eryt=0.640 papu=0.480 exco=0.545 lich=0.675
+    σ  : seve=0.99 eryt=0.99 papu=0.99 exco=0.99 lich=0.99
+    -> best 갱신 (score=0.570)
+[Ep   3/100 warmup] tr=1.026 va=0.996 | score=0.566 (mean_QWK=0.523)
+    QWK: seve=0.638 eryt=0.512 papu=0.373 exco=0.559 lich=0.531
+    ±1 : seve=0.985 eryt=0.985 papu=0.985 exco=0.960 lich=0.945   acc: seve=0.630 eryt=0.605 papu=0.435 exco=0.535 lich=0.645
+    σ  : seve=0.98 eryt=0.98 papu=0.98 exco=0.98 lich=0.98
+[Ep   4/100 IBB a=0.50] tr=0.262 va=0.979 | score=0.583 (mean_QWK=0.528)
+    S1 : seve=0.121 eryt=0.160 papu=0.250 exco=0.231 lich=0.288
+    S2 : seve-eryt=0.296 seve-papu=0.375 eryt-papu=0.435 seve-exco=0.357
+    QWK: seve=0.675 eryt=0.547 papu=0.417 exco=0.575 lich=0.424
+    ±1 : seve=0.985 eryt=0.985 papu=0.985 exco=0.960 lich=0.930   acc: seve=0.625 eryt=0.615 papu=0.470 exco=0.505 lich=0.640
+    σ  : seve=0.97 eryt=0.98 papu=0.98 exco=0.98 lich=0.98
+    -> best 갱신 (score=0.583)
+[Ep   5/100 IBB a=0.50] tr=0.248 va=0.944 | score=0.649 (mean_QWK=0.600)
+    S1 : seve=0.116 eryt=0.158 papu=0.238 exco=0.219 lich=0.275
+    S2 : seve-eryt=0.265 seve-papu=0.342 eryt-papu=0.407 seve-exco=0.354
+    QWK: seve=0.730 eryt=0.598 papu=0.495 exco=0.617 lich=0.559
+    ±1 : seve=0.985 eryt=0.990 papu=0.975 exco=0.965 lich=0.950   acc: seve=0.715 eryt=0.640 papu=0.445 exco=0.570 lich=0.635
+    σ  : seve=0.97 eryt=0.97 papu=0.97 exco=0.98 lich=0.98
+    -> best 갱신 (score=0.649)
+[Ep   6/100 IBB a=0.50] tr=0.235 va=0.966 | score=0.567 (mean_QWK=0.513)
+    S1 : seve=0.106 eryt=0.136 papu=0.232 exco=0.223 lich=0.263
+    S2 : seve-eryt=0.235 seve-papu=0.332 eryt-papu=0.387 seve-exco=0.330
+    QWK: seve=0.657 eryt=0.493 papu=0.397 exco=0.479 lich=0.541
+    ±1 : seve=0.995 eryt=0.975 papu=0.935 exco=0.940 lich=0.930   acc: seve=0.635 eryt=0.615 papu=0.460 exco=0.500 lich=0.610
+    σ  : seve=0.97 eryt=0.97 papu=0.97 exco=0.97 lich=0.98
+[Ep   7/100 IBB a=0.50] tr=0.231 va=0.945 | score=0.619 (mean_QWK=0.562)
+    S1 : seve=0.090 eryt=0.133 papu=0.246 exco=0.206 lich=0.257
+    S2 : seve-eryt=0.272 seve-papu=0.312 eryt-papu=0.407 seve-exco=0.296
+    QWK: seve=0.714 eryt=0.600 papu=0.472 exco=0.520 lich=0.503
+    ±1 : seve=0.985 eryt=0.985 papu=0.970 exco=0.955 lich=0.960   acc: seve=0.690 eryt=0.670 papu=0.450 exco=0.490 lich=0.520
+    σ  : seve=0.96 eryt=0.97 papu=0.97 exco=0.97 lich=0.97
+[Ep   8/100 IBB a=0.50] tr=0.224 va=0.979 | score=0.565 (mean_QWK=0.527)
+    S1 : seve=0.074 eryt=0.145 papu=0.221 exco=0.230 lich=0.251
+    S2 : seve-eryt=0.227 seve-papu=0.328 eryt-papu=0.372 seve-exco=0.291
+    QWK: seve=0.627 eryt=0.481 papu=0.394 exco=0.629 lich=0.506
+    ±1 : seve=0.980 eryt=0.965 papu=0.950 exco=0.970 lich=0.945   acc: seve=0.610 eryt=0.615 papu=0.390 exco=0.530 lich=0.570
+    σ  : seve=0.96 eryt=0.96 papu=0.97 exco=0.97 lich=0.97
+[Ep   9/100 IBB a=0.50] tr=0.215 va=0.956 | score=0.618 (mean_QWK=0.565)
+    S1 : seve=0.075 eryt=0.142 papu=0.222 exco=0.204 lich=0.260
+    S2 : seve-eryt=0.223 seve-papu=0.291 eryt-papu=0.337 seve-exco=0.287
+    QWK: seve=0.706 eryt=0.574 papu=0.411 exco=0.619 lich=0.514
+    ±1 : seve=0.990 eryt=0.975 papu=0.940 exco=0.970 lich=0.935   acc: seve=0.675 eryt=0.630 papu=0.390 exco=0.540 lich=0.610
+    σ  : seve=0.96 eryt=0.96 papu=0.96 exco=0.97 lich=0.97
+[Ep  10/100 IBB a=0.50] tr=0.208 va=0.919 | score=0.633 (mean_QWK=0.580)
+    S1 : seve=0.081 eryt=0.123 papu=0.214 exco=0.220 lich=0.232
+    S2 : seve-eryt=0.208 seve-papu=0.292 eryt-papu=0.335 seve-exco=0.273
+    QWK: seve=0.721 eryt=0.671 papu=0.423 exco=0.592 lich=0.491
+    ±1 : seve=0.990 eryt=0.995 papu=0.940 exco=0.970 lich=0.905   acc: seve=0.690 eryt=0.685 papu=0.445 exco=0.530 lich=0.605
+    σ  : seve=0.95 eryt=0.96 papu=0.96 exco=0.97 lich=0.97
+[Ep  11/100 IBB a=0.50] tr=0.201 va=0.874 | score=0.637 (mean_QWK=0.580)
+    S1 : seve=0.068 eryt=0.112 papu=0.198 exco=0.211 lich=0.223
+    S2 : seve-eryt=0.187 seve-papu=0.270 eryt-papu=0.365 seve-exco=0.288
+    QWK: seve=0.732 eryt=0.587 papu=0.435 exco=0.618 lich=0.528
+    ±1 : seve=0.985 eryt=0.985 papu=0.965 exco=0.980 lich=0.930   acc: seve=0.725 eryt=0.665 papu=0.475 exco=0.510 lich=0.610
+    σ  : seve=0.95 eryt=0.96 papu=0.96 exco=0.96 lich=0.97
+[Ep  12/100 IBB a=0.50] tr=0.193 va=0.877 | score=0.624 (mean_QWK=0.581)
+    S1 : seve=0.059 eryt=0.108 papu=0.205 exco=0.199 lich=0.235
+    S2 : seve-eryt=0.176 seve-papu=0.285 eryt-papu=0.311 seve-exco=0.260
+    QWK: seve=0.695 eryt=0.602 papu=0.480 exco=0.587 lich=0.541
+    ±1 : seve=0.980 eryt=0.980 papu=0.965 exco=0.960 lich=0.930   acc: seve=0.710 eryt=0.670 papu=0.495 exco=0.560 lich=0.635
+    σ  : seve=0.95 eryt=0.95 papu=0.96 exco=0.96 lich=0.97
+[Ep  13/100 IBB a=0.50] tr=0.194 va=0.916 | score=0.609 (mean_QWK=0.557)
+    S1 : seve=0.055 eryt=0.113 papu=0.185 exco=0.194 lich=0.243
+    S2 : seve-eryt=0.171 seve-papu=0.268 eryt-papu=0.355 seve-exco=0.262
+    QWK: seve=0.694 eryt=0.554 papu=0.434 exco=0.608 lich=0.495
+    ±1 : seve=0.990 eryt=0.980 papu=0.945 exco=0.955 lich=0.920   acc: seve=0.660 eryt=0.650 papu=0.430 exco=0.530 lich=0.535
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.96 lich=0.97
+[Ep  14/100 IBB a=0.50] tr=0.176 va=0.938 | score=0.622 (mean_QWK=0.568)
+    S1 : seve=0.046 eryt=0.110 papu=0.192 exco=0.180 lich=0.210
+    S2 : seve-eryt=0.162 seve-papu=0.215 eryt-papu=0.318 seve-exco=0.243
+    QWK: seve=0.713 eryt=0.572 papu=0.440 exco=0.609 lich=0.506
+    ±1 : seve=0.980 eryt=0.985 papu=0.960 exco=0.965 lich=0.940   acc: seve=0.695 eryt=0.600 papu=0.425 exco=0.565 lich=0.495
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.96 lich=0.97
+[Ep  15/100 IBB a=0.50] tr=0.175 va=0.843 | score=0.645 (mean_QWK=0.592)
+    S1 : seve=0.048 eryt=0.093 papu=0.172 exco=0.184 lich=0.224
+    S2 : seve-eryt=0.165 seve-papu=0.255 eryt-papu=0.309 seve-exco=0.221
+    QWK: seve=0.733 eryt=0.608 papu=0.449 exco=0.607 lich=0.563
+    ±1 : seve=0.985 eryt=0.990 papu=0.960 exco=0.950 lich=0.930   acc: seve=0.710 eryt=0.655 papu=0.490 exco=0.550 lich=0.620
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.96 lich=0.97
+[Ep  16/100 IBB a=0.50] tr=0.166 va=0.919 | score=0.617 (mean_QWK=0.577)
+    S1 : seve=0.025 eryt=0.101 papu=0.179 exco=0.163 lich=0.222
+    S2 : seve-eryt=0.169 seve-papu=0.212 eryt-papu=0.271 seve-exco=0.240
+    QWK: seve=0.684 eryt=0.514 papu=0.459 exco=0.624 lich=0.605
+    ±1 : seve=0.985 eryt=0.980 papu=0.960 exco=0.980 lich=0.950   acc: seve=0.655 eryt=0.555 papu=0.425 exco=0.500 lich=0.640
+    σ  : seve=0.93 eryt=0.94 papu=0.95 exco=0.95 lich=0.96
+[Ep  17/100 IBB a=0.50] tr=0.165 va=0.845 | score=0.640 (mean_QWK=0.587)
+    S1 : seve=0.038 eryt=0.095 papu=0.177 exco=0.171 lich=0.195
+    S2 : seve-eryt=0.164 seve-papu=0.210 eryt-papu=0.296 seve-exco=0.225
+    QWK: seve=0.728 eryt=0.585 papu=0.427 exco=0.638 lich=0.559
+    ±1 : seve=0.985 eryt=0.995 papu=0.960 exco=0.985 lich=0.925   acc: seve=0.700 eryt=0.595 papu=0.450 exco=0.525 lich=0.645
+    σ  : seve=0.93 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  18/100 IBB a=0.50] tr=0.152 va=0.853 | score=0.626 (mean_QWK=0.575)
+    S1 : seve=0.020 eryt=0.080 papu=0.167 exco=0.171 lich=0.217
+    S2 : seve-eryt=0.129 seve-papu=0.220 eryt-papu=0.242 seve-exco=0.190
+    QWK: seve=0.711 eryt=0.598 papu=0.442 exco=0.598 lich=0.527
+    ±1 : seve=0.985 eryt=0.985 papu=0.960 exco=0.970 lich=0.955   acc: seve=0.685 eryt=0.665 papu=0.450 exco=0.505 lich=0.550
+    σ  : seve=0.93 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  19/100 IBB a=0.50] tr=0.151 va=0.859 | score=0.624 (mean_QWK=0.559)
+    S1 : seve=0.007 eryt=0.084 papu=0.152 exco=0.197 lich=0.198
+    S2 : seve-eryt=0.127 seve-papu=0.198 eryt-papu=0.297 seve-exco=0.173
+    QWK: seve=0.731 eryt=0.602 papu=0.441 exco=0.574 lich=0.448
+    ±1 : seve=0.985 eryt=0.990 papu=0.950 exco=0.970 lich=0.955   acc: seve=0.715 eryt=0.640 papu=0.465 exco=0.540 lich=0.480
+    σ  : seve=0.92 eryt=0.93 papu=0.94 exco=0.95 lich=0.96
+[Ep  20/100 IBB a=0.50] tr=0.141 va=0.928 | score=0.592 (mean_QWK=0.545)
+    S1 : seve=0.010 eryt=0.067 papu=0.166 exco=0.170 lich=0.205
+    S2 : seve-eryt=0.114 seve-papu=0.184 eryt-papu=0.250 seve-exco=0.154
+    QWK: seve=0.671 eryt=0.555 papu=0.423 exco=0.584 lich=0.491
+    ±1 : seve=0.980 eryt=0.985 papu=0.955 exco=0.965 lich=0.960   acc: seve=0.655 eryt=0.570 papu=0.430 exco=0.515 lich=0.495
+    σ  : seve=0.92 eryt=0.93 papu=0.93 exco=0.95 lich=0.96
+[Ep  21/100 IBB a=0.50] tr=0.135 va=0.826 | score=0.622 (mean_QWK=0.578)
+    S1 : seve=0.008 eryt=0.066 papu=0.166 exco=0.169 lich=0.190
+    S2 : seve-eryt=0.087 seve-papu=0.167 eryt-papu=0.207 seve-exco=0.205
+    QWK: seve=0.697 eryt=0.589 papu=0.449 exco=0.623 lich=0.529
+    ±1 : seve=0.985 eryt=0.985 papu=0.950 exco=0.965 lich=0.950   acc: seve=0.680 eryt=0.660 papu=0.475 exco=0.555 lich=0.550
+    σ  : seve=0.92 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  22/100 IBB a=0.50] tr=0.134 va=0.862 | score=0.622 (mean_QWK=0.562)
+    S1 : seve=0.004 eryt=0.058 papu=0.155 exco=0.153 lich=0.198
+    S2 : seve-eryt=0.081 seve-papu=0.185 eryt-papu=0.223 seve-exco=0.216
+    QWK: seve=0.722 eryt=0.556 papu=0.439 exco=0.585 lich=0.508
+    ±1 : seve=0.985 eryt=0.975 papu=0.920 exco=0.960 lich=0.950   acc: seve=0.680 eryt=0.610 papu=0.505 exco=0.510 lich=0.520
+    σ  : seve=0.91 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  23/100 IBB a=0.50] tr=0.123 va=0.850 | score=0.631 (mean_QWK=0.573)
+    S1 : seve=0.009 eryt=0.068 papu=0.150 exco=0.155 lich=0.203
+    S2 : seve-eryt=0.064 seve-papu=0.129 eryt-papu=0.202 seve-exco=0.148
+    QWK: seve=0.727 eryt=0.634 papu=0.402 exco=0.617 lich=0.485
+    ±1 : seve=0.985 eryt=1.000 papu=0.950 exco=0.965 lich=0.940   acc: seve=0.710 eryt=0.660 papu=0.465 exco=0.535 lich=0.510
+    σ  : seve=0.91 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  24/100 IBB a=0.50] tr=0.110 va=0.828 | score=0.623 (mean_QWK=0.560)
+    S1 : seve=-0.011 eryt=0.061 papu=0.127 exco=0.144 lich=0.179
+    S2 : seve-eryt=0.057 seve-papu=0.120 eryt-papu=0.190 seve-exco=0.150
+    QWK: seve=0.726 eryt=0.599 papu=0.409 exco=0.563 lich=0.504
+    ±1 : seve=0.980 eryt=0.990 papu=0.940 exco=0.960 lich=0.950   acc: seve=0.700 eryt=0.635 papu=0.450 exco=0.530 lich=0.555
+    σ  : seve=0.91 eryt=0.92 papu=0.93 exco=0.94 lich=0.95
+[Ep  25/100 IBB a=0.50] tr=0.117 va=0.822 | score=0.616 (mean_QWK=0.566)
+    S1 : seve=0.009 eryt=0.069 papu=0.134 exco=0.155 lich=0.185
+    S2 : seve-eryt=0.067 seve-papu=0.118 eryt-papu=0.211 seve-exco=0.128
+    QWK: seve=0.698 eryt=0.534 papu=0.431 exco=0.635 lich=0.534
+    ±1 : seve=0.990 eryt=0.995 papu=0.955 exco=0.980 lich=0.960   acc: seve=0.675 eryt=0.600 papu=0.470 exco=0.515 lich=0.540
+    σ  : seve=0.90 eryt=0.92 papu=0.92 exco=0.94 lich=0.95
+[early stop] val score 20ep 개선 없음 (best ep5=0.649) -> ep25 중단
+
+[TEST] (best ep5)  score=0.586  mean_QWK=0.544
+    QWK: seve=0.656 eryt=0.551 papu=0.482 exco=0.463 lich=0.569
+    ±1 : seve=0.985 eryt=0.975 papu=0.960 exco=0.955 lich=0.970   acc: seve=0.620 eryt=0.625 papu=0.520 exco=0.535 lich=0.640
+[done] /home/work/ogw/classification_crop/runs/M2_ocnnit_s42  val_best=0.649  test_score=0.586 (test_mean_QWK=0.544)
+
+######## [2/4] M2_ccnnit_s42 ########
+[dataset] 샘플 1400개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[ibb] alpha=0.5 cap=4.0x min_cell=5 edge_V>=0.25 edge_loss=pair
+[ibb] 엣지 4개: seve-eryt(V=0.47), seve-papu(V=0.33), eryt-papu(V=0.32), seve-exco(V=0.26)
+[ibb] 에폭당 배치 84 (step1_mult=1.0) (Step1 40 + Step2 44, 자연분포 에폭=44)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[exp] bbox  [model] pvtv2b0 (pvt_v2_b0)  params=3.6M
+[pairwise] CCNN-IT(3-step)  엣지 4개: seve-eryt, seve-papu, eryt-papu, seve-exco  w_nodes=0.1 unary=nll cut=25.0 shared=True theta_lr=0.02 decode=joint
+[loss] head=CORN(순서형)  결합=Kendall σ 자동가중  ls=0.1
+[Ep   1/100 warmup] tr=3.207 va=2.289 | score=0.341 (mean_QWK=0.291)
+    QWK: seve=0.422 eryt=0.420 papu=0.225 exco=0.309 lich=0.081
+    ±1 : seve=0.945 eryt=0.970 papu=0.945 exco=0.920 lich=0.870   acc: seve=0.545 eryt=0.610 papu=0.495 exco=0.475 lich=0.640
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=1.00
+    -> best 갱신 (score=0.341)
+[Ep   2/100 warmup] tr=2.258 va=1.903 | score=0.543 (mean_QWK=0.439)
+    QWK: seve=0.717 eryt=0.560 papu=0.274 exco=0.453 lich=0.189
+    ±1 : seve=0.985 eryt=0.995 papu=0.950 exco=0.915 lich=0.880   acc: seve=0.695 eryt=0.645 papu=0.505 exco=0.525 lich=0.650
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.01 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.543)
+[Ep   3/100 warmup] tr=1.984 va=1.817 | score=0.506 (mean_QWK=0.420)
+    QWK: seve=0.650 eryt=0.527 papu=0.302 exco=0.542 lich=0.079
+    ±1 : seve=0.980 eryt=0.975 papu=0.950 exco=0.960 lich=0.865   acc: seve=0.630 eryt=0.630 papu=0.515 exco=0.560 lich=0.630
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.01 papu=1.01 exco=1.01 lich=0.99
+[Ep   4/100 IBB a=0.50] tr=1.009 va=1.854 | score=0.550 (mean_QWK=0.474)
+    S1 : seve=0.048 eryt=0.047 papu=0.059 exco=0.055 lich=0.064
+    S2 : seve-eryt=1.732 seve-papu=1.896 eryt-papu=1.865 seve-exco=2.011
+    QWK: seve=0.677 eryt=0.524 papu=0.336 exco=0.569 lich=0.262
+    ±1 : seve=0.975 eryt=0.980 papu=0.955 exco=0.960 lich=0.900   acc: seve=0.665 eryt=0.640 papu=0.490 exco=0.570 lich=0.650
+    th : seve-eryt=+1.43 seve-papu=+1.03 eryt-papu=+1.14 seve-exco=-0.22
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.550)
+[Ep   5/100 IBB a=0.50] tr=0.975 va=1.815 | score=0.573 (mean_QWK=0.516)
+    S1 : seve=0.048 eryt=0.048 papu=0.057 exco=0.055 lich=0.056
+    S2 : seve-eryt=1.770 seve-papu=1.851 eryt-papu=1.844 seve-exco=1.790
+    QWK: seve=0.667 eryt=0.530 papu=0.400 exco=0.625 lich=0.359
+    ±1 : seve=0.980 eryt=0.975 papu=0.955 exco=0.975 lich=0.905   acc: seve=0.635 eryt=0.635 papu=0.490 exco=0.575 lich=0.635
+    th : seve-eryt=+2.30 seve-papu=+1.87 eryt-papu=+1.72 seve-exco=-0.07
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.573)
+[Ep   6/100 IBB a=0.50] tr=0.945 va=1.796 | score=0.584 (mean_QWK=0.525)
+    S1 : seve=0.043 eryt=0.045 papu=0.055 exco=0.057 lich=0.057
+    S2 : seve-eryt=1.673 seve-papu=1.807 eryt-papu=1.794 seve-exco=1.759
+    QWK: seve=0.681 eryt=0.561 papu=0.351 exco=0.627 lich=0.403
+    ±1 : seve=0.980 eryt=0.985 papu=0.945 exco=0.975 lich=0.910   acc: seve=0.670 eryt=0.615 papu=0.455 exco=0.570 lich=0.610
+    th : seve-eryt=+2.58 seve-papu=+2.25 eryt-papu=+2.06 seve-exco=+0.13
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.584)
+[Ep   7/100 IBB a=0.50] tr=0.931 va=1.799 | score=0.592 (mean_QWK=0.542)
+    S1 : seve=0.042 eryt=0.048 papu=0.055 exco=0.052 lich=0.059
+    S2 : seve-eryt=1.661 seve-papu=1.782 eryt-papu=1.779 seve-exco=1.702
+    QWK: seve=0.675 eryt=0.559 papu=0.412 exco=0.618 lich=0.447
+    ±1 : seve=0.980 eryt=0.980 papu=0.950 exco=0.970 lich=0.920   acc: seve=0.655 eryt=0.625 papu=0.460 exco=0.555 lich=0.570
+    th : seve-eryt=+2.58 seve-papu=+2.23 eryt-papu=+1.70 seve-exco=+0.50
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.592)
+[Ep   8/100 IBB a=0.50] tr=0.951 va=1.806 | score=0.582 (mean_QWK=0.529)
+    S1 : seve=0.043 eryt=0.047 papu=0.052 exco=0.055 lich=0.057
+    S2 : seve-eryt=1.676 seve-papu=1.784 eryt-papu=1.811 seve-exco=1.807
+    QWK: seve=0.670 eryt=0.563 papu=0.378 exco=0.625 lich=0.407
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.960 lich=0.925   acc: seve=0.645 eryt=0.610 papu=0.425 exco=0.570 lich=0.520
+    th : seve-eryt=+2.60 seve-papu=+2.11 eryt-papu=+1.11 seve-exco=+0.75
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep   9/100 IBB a=0.50] tr=0.911 va=1.800 | score=0.593 (mean_QWK=0.543)
+    S1 : seve=0.042 eryt=0.046 papu=0.055 exco=0.054 lich=0.056
+    S2 : seve-eryt=1.537 seve-papu=1.761 eryt-papu=1.745 seve-exco=1.730
+    QWK: seve=0.678 eryt=0.565 papu=0.406 exco=0.563 lich=0.503
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.945 lich=0.935   acc: seve=0.660 eryt=0.615 papu=0.455 exco=0.540 lich=0.550
+    th : seve-eryt=+2.81 seve-papu=+1.88 eryt-papu=+0.85 seve-exco=+0.77
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.593)
+[Ep  10/100 IBB a=0.50] tr=0.910 va=1.793 | score=0.603 (mean_QWK=0.554)
+    S1 : seve=0.045 eryt=0.045 papu=0.054 exco=0.053 lich=0.052
+    S2 : seve-eryt=1.514 seve-papu=1.716 eryt-papu=1.791 seve-exco=1.744
+    QWK: seve=0.684 eryt=0.575 papu=0.411 exco=0.577 lich=0.522
+    ±1 : seve=0.980 eryt=0.985 papu=0.945 exco=0.945 lich=0.925   acc: seve=0.670 eryt=0.610 papu=0.445 exco=0.525 lich=0.600
+    th : seve-eryt=+2.93 seve-papu=+1.86 eryt-papu=+1.06 seve-exco=+0.72
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.603)
+[Ep  11/100 IBB a=0.50] tr=0.908 va=1.818 | score=0.600 (mean_QWK=0.551)
+    S1 : seve=0.040 eryt=0.047 papu=0.055 exco=0.055 lich=0.049
+    S2 : seve-eryt=1.557 seve-papu=1.700 eryt-papu=1.767 seve-exco=1.728
+    QWK: seve=0.681 eryt=0.570 papu=0.398 exco=0.544 lich=0.562
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.935 lich=0.930   acc: seve=0.655 eryt=0.605 papu=0.425 exco=0.500 lich=0.635
+    th : seve-eryt=+2.88 seve-papu=+1.75 eryt-papu=+0.99 seve-exco=+0.53
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  12/100 IBB a=0.50] tr=0.925 va=1.804 | score=0.602 (mean_QWK=0.556)
+    S1 : seve=0.043 eryt=0.042 papu=0.053 exco=0.054 lich=0.053
+    S2 : seve-eryt=1.554 seve-papu=1.783 eryt-papu=1.800 seve-exco=1.744
+    QWK: seve=0.679 eryt=0.547 papu=0.421 exco=0.555 lich=0.578
+    ±1 : seve=0.980 eryt=0.975 papu=0.945 exco=0.940 lich=0.925   acc: seve=0.655 eryt=0.590 papu=0.430 exco=0.520 lich=0.635
+    th : seve-eryt=+2.81 seve-papu=+1.55 eryt-papu=+0.80 seve-exco=+0.43
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.02 lich=0.99
+[Ep  13/100 IBB a=0.50] tr=0.922 va=1.823 | score=0.606 (mean_QWK=0.554)
+    S1 : seve=0.041 eryt=0.042 papu=0.055 exco=0.055 lich=0.049
+    S2 : seve-eryt=1.533 seve-papu=1.747 eryt-papu=1.848 seve-exco=1.740
+    QWK: seve=0.694 eryt=0.559 papu=0.422 exco=0.552 lich=0.542
+    ±1 : seve=0.980 eryt=0.970 papu=0.945 exco=0.940 lich=0.920   acc: seve=0.665 eryt=0.615 papu=0.430 exco=0.495 lich=0.620
+    th : seve-eryt=+2.67 seve-papu=+1.47 eryt-papu=+0.65 seve-exco=+0.28
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.02 lich=1.00
+    -> best 갱신 (score=0.606)
+[Ep  14/100 IBB a=0.50] tr=0.910 va=1.817 | score=0.624 (mean_QWK=0.580)
+    S1 : seve=0.042 eryt=0.042 papu=0.051 exco=0.054 lich=0.048
+    S2 : seve-eryt=1.497 seve-papu=1.757 eryt-papu=1.814 seve-exco=1.710
+    QWK: seve=0.697 eryt=0.603 papu=0.460 exco=0.576 lich=0.563
+    ±1 : seve=0.985 eryt=0.980 papu=0.960 exco=0.945 lich=0.920   acc: seve=0.665 eryt=0.655 papu=0.420 exco=0.525 lich=0.625
+    th : seve-eryt=+2.59 seve-papu=+1.49 eryt-papu=+0.91 seve-exco=+0.33
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.02 lich=1.00
+    -> best 갱신 (score=0.624)
+[Ep  15/100 IBB a=0.50] tr=0.908 va=1.834 | score=0.615 (mean_QWK=0.556)
+    S1 : seve=0.045 eryt=0.044 papu=0.055 exco=0.054 lich=0.049
+    S2 : seve-eryt=1.541 seve-papu=1.716 eryt-papu=1.836 seve-exco=1.658
+    QWK: seve=0.712 eryt=0.566 papu=0.427 exco=0.553 lich=0.524
+    ±1 : seve=0.980 eryt=0.975 papu=0.940 exco=0.940 lich=0.920   acc: seve=0.680 eryt=0.605 papu=0.410 exco=0.495 lich=0.580
+    th : seve-eryt=+2.57 seve-papu=+1.34 eryt-papu=+1.33 seve-exco=+0.35
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.02 lich=1.00
+[Ep  16/100 IBB a=0.50] tr=0.904 va=1.845 | score=0.610 (mean_QWK=0.565)
+    S1 : seve=0.044 eryt=0.046 papu=0.058 exco=0.055 lich=0.051
+    S2 : seve-eryt=1.533 seve-papu=1.757 eryt-papu=1.763 seve-exco=1.670
+    QWK: seve=0.685 eryt=0.568 papu=0.431 exco=0.599 lich=0.544
+    ±1 : seve=0.970 eryt=0.980 papu=0.940 exco=0.950 lich=0.915   acc: seve=0.645 eryt=0.580 papu=0.425 exco=0.510 lich=0.610
+    th : seve-eryt=+2.57 seve-papu=+1.48 eryt-papu=+1.40 seve-exco=+0.30
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=1.00
+[Ep  17/100 IBB a=0.50] tr=0.915 va=1.823 | score=0.626 (mean_QWK=0.568)
+    S1 : seve=0.040 eryt=0.041 papu=0.052 exco=0.050 lich=0.048
+    S2 : seve-eryt=1.503 seve-papu=1.756 eryt-papu=1.844 seve-exco=1.720
+    QWK: seve=0.722 eryt=0.583 papu=0.425 exco=0.569 lich=0.541
+    ±1 : seve=0.985 eryt=0.975 papu=0.945 exco=0.940 lich=0.920   acc: seve=0.675 eryt=0.630 papu=0.420 exco=0.505 lich=0.610
+    th : seve-eryt=+2.54 seve-papu=+1.39 eryt-papu=+1.10 seve-exco=+0.61
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=1.00
+    -> best 갱신 (score=0.626)
+[Ep  18/100 IBB a=0.50] tr=0.910 va=1.824 | score=0.628 (mean_QWK=0.577)
+    S1 : seve=0.043 eryt=0.042 papu=0.052 exco=0.050 lich=0.050
+    S2 : seve-eryt=1.551 seve-papu=1.760 eryt-papu=1.762 seve-exco=1.702
+    QWK: seve=0.712 eryt=0.596 papu=0.456 exco=0.599 lich=0.521
+    ±1 : seve=0.985 eryt=0.975 papu=0.950 exco=0.955 lich=0.920   acc: seve=0.670 eryt=0.640 papu=0.410 exco=0.515 lich=0.590
+    th : seve-eryt=+2.54 seve-papu=+1.10 eryt-papu=+0.64 seve-exco=+0.99
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=1.00
+    -> best 갱신 (score=0.628)
+[Ep  19/100 IBB a=0.50] tr=0.898 va=1.863 | score=0.613 (mean_QWK=0.568)
+    S1 : seve=0.040 eryt=0.042 papu=0.050 exco=0.053 lich=0.049
+    S2 : seve-eryt=1.590 seve-papu=1.680 eryt-papu=1.755 seve-exco=1.662
+    QWK: seve=0.686 eryt=0.584 papu=0.444 exco=0.594 lich=0.535
+    ±1 : seve=0.970 eryt=0.970 papu=0.940 exco=0.945 lich=0.940   acc: seve=0.645 eryt=0.620 papu=0.415 exco=0.510 lich=0.565
+    th : seve-eryt=+2.77 seve-papu=+0.88 eryt-papu=+0.43 seve-exco=+1.21
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  20/100 IBB a=0.50] tr=0.895 va=1.815 | score=0.622 (mean_QWK=0.577)
+    S1 : seve=0.041 eryt=0.041 papu=0.052 exco=0.051 lich=0.049
+    S2 : seve-eryt=1.570 seve-papu=1.702 eryt-papu=1.809 seve-exco=1.585
+    QWK: seve=0.698 eryt=0.597 papu=0.474 exco=0.595 lich=0.521
+    ±1 : seve=0.970 eryt=0.975 papu=0.950 exco=0.950 lich=0.940   acc: seve=0.670 eryt=0.640 papu=0.445 exco=0.535 lich=0.585
+    th : seve-eryt=+2.77 seve-papu=+0.92 eryt-papu=+0.61 seve-exco=+1.30
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  21/100 IBB a=0.50] tr=0.899 va=1.827 | score=0.619 (mean_QWK=0.564)
+    S1 : seve=0.044 eryt=0.041 papu=0.051 exco=0.054 lich=0.045
+    S2 : seve-eryt=1.533 seve-papu=1.704 eryt-papu=1.758 seve-exco=1.696
+    QWK: seve=0.711 eryt=0.572 papu=0.450 exco=0.578 lich=0.508
+    ±1 : seve=0.985 eryt=0.975 papu=0.945 exco=0.935 lich=0.930   acc: seve=0.660 eryt=0.610 papu=0.405 exco=0.505 lich=0.575
+    th : seve-eryt=+2.59 seve-papu=+1.23 eryt-papu=+0.81 seve-exco=+1.24
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  22/100 IBB a=0.50] tr=0.882 va=1.822 | score=0.618 (mean_QWK=0.566)
+    S1 : seve=0.043 eryt=0.041 papu=0.053 exco=0.052 lich=0.052
+    S2 : seve-eryt=1.559 seve-papu=1.638 eryt-papu=1.674 seve-exco=1.686
+    QWK: seve=0.705 eryt=0.604 papu=0.429 exco=0.576 lich=0.515
+    ±1 : seve=0.985 eryt=0.980 papu=0.935 exco=0.945 lich=0.925   acc: seve=0.670 eryt=0.635 papu=0.425 exco=0.495 lich=0.595
+    th : seve-eryt=+2.57 seve-papu=+1.46 eryt-papu=+0.72 seve-exco=+1.15
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  23/100 IBB a=0.50] tr=0.890 va=1.805 | score=0.623 (mean_QWK=0.570)
+    S1 : seve=0.035 eryt=0.042 papu=0.051 exco=0.050 lich=0.047
+    S2 : seve-eryt=1.546 seve-papu=1.670 eryt-papu=1.695 seve-exco=1.723
+    QWK: seve=0.711 eryt=0.577 papu=0.473 exco=0.584 lich=0.504
+    ±1 : seve=0.975 eryt=0.975 papu=0.940 exco=0.940 lich=0.915   acc: seve=0.690 eryt=0.625 papu=0.430 exco=0.530 lich=0.605
+    th : seve-eryt=+2.73 seve-papu=+1.39 eryt-papu=+1.04 seve-exco=+1.02
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  24/100 IBB a=0.50] tr=0.886 va=1.808 | score=0.618 (mean_QWK=0.565)
+    S1 : seve=0.041 eryt=0.046 papu=0.057 exco=0.051 lich=0.047
+    S2 : seve-eryt=1.557 seve-papu=1.617 eryt-papu=1.801 seve-exco=1.615
+    QWK: seve=0.705 eryt=0.593 papu=0.430 exco=0.565 lich=0.532
+    ±1 : seve=0.985 eryt=0.980 papu=0.935 exco=0.935 lich=0.915   acc: seve=0.670 eryt=0.625 papu=0.420 exco=0.520 lich=0.640
+    th : seve-eryt=+2.75 seve-papu=+1.24 eryt-papu=+1.39 seve-exco=+0.90
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.02 lich=0.99
+[Ep  25/100 IBB a=0.50] tr=0.894 va=1.821 | score=0.631 (mean_QWK=0.580)
+    S1 : seve=0.039 eryt=0.042 papu=0.053 exco=0.052 lich=0.045
+    S2 : seve-eryt=1.590 seve-papu=1.667 eryt-papu=1.679 seve-exco=1.727
+    QWK: seve=0.716 eryt=0.595 papu=0.464 exco=0.581 lich=0.542
+    ±1 : seve=0.985 eryt=0.975 papu=0.940 exco=0.940 lich=0.925   acc: seve=0.680 eryt=0.630 papu=0.445 exco=0.525 lich=0.620
+    th : seve-eryt=+2.33 seve-papu=+1.45 eryt-papu=+1.46 seve-exco=+0.56
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+    -> best 갱신 (score=0.631)
+[Ep  26/100 IBB a=0.50] tr=0.847 va=1.791 | score=0.626 (mean_QWK=0.575)
+    S1 : seve=0.042 eryt=0.042 papu=0.053 exco=0.050 lich=0.047
+    S2 : seve-eryt=1.386 seve-papu=1.563 eryt-papu=1.801 seve-exco=1.547
+    QWK: seve=0.711 eryt=0.596 papu=0.460 exco=0.584 lich=0.521
+    ±1 : seve=0.985 eryt=0.975 papu=0.945 exco=0.945 lich=0.915   acc: seve=0.680 eryt=0.645 papu=0.430 exco=0.525 lich=0.630
+    th : seve-eryt=+2.16 seve-papu=+1.41 eryt-papu=+1.45 seve-exco=+0.17
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  27/100 IBB a=0.50] tr=0.874 va=1.828 | score=0.628 (mean_QWK=0.577)
+    S1 : seve=0.040 eryt=0.041 papu=0.052 exco=0.052 lich=0.051
+    S2 : seve-eryt=1.515 seve-papu=1.731 eryt-papu=1.663 seve-exco=1.593
+    QWK: seve=0.714 eryt=0.599 papu=0.461 exco=0.591 lich=0.522
+    ±1 : seve=0.985 eryt=0.980 papu=0.940 exco=0.950 lich=0.910   acc: seve=0.675 eryt=0.605 papu=0.430 exco=0.500 lich=0.635
+    th : seve-eryt=+2.32 seve-papu=+1.25 eryt-papu=+1.14 seve-exco=-0.13
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  28/100 IBB a=0.50] tr=0.885 va=1.829 | score=0.620 (mean_QWK=0.564)
+    S1 : seve=0.040 eryt=0.046 papu=0.054 exco=0.048 lich=0.044
+    S2 : seve-eryt=1.542 seve-papu=1.697 eryt-papu=1.743 seve-exco=1.604
+    QWK: seve=0.714 eryt=0.589 papu=0.434 exco=0.577 lich=0.506
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.945 lich=0.920   acc: seve=0.675 eryt=0.600 papu=0.430 exco=0.475 lich=0.610
+    th : seve-eryt=+2.77 seve-papu=+1.66 eryt-papu=+0.98 seve-exco=+0.11
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  29/100 IBB a=0.50] tr=0.885 va=1.848 | score=0.607 (mean_QWK=0.560)
+    S1 : seve=0.041 eryt=0.041 papu=0.049 exco=0.049 lich=0.047
+    S2 : seve-eryt=1.504 seve-papu=1.704 eryt-papu=1.729 seve-exco=1.657
+    QWK: seve=0.685 eryt=0.579 papu=0.450 exco=0.576 lich=0.510
+    ±1 : seve=0.985 eryt=0.980 papu=0.945 exco=0.940 lich=0.920   acc: seve=0.640 eryt=0.590 papu=0.425 exco=0.470 lich=0.570
+    th : seve-eryt=+2.77 seve-papu=+1.60 eryt-papu=+1.12 seve-exco=+0.49
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  30/100 IBB a=0.50] tr=0.882 va=1.795 | score=0.618 (mean_QWK=0.573)
+    S1 : seve=0.037 eryt=0.042 papu=0.049 exco=0.051 lich=0.045
+    S2 : seve-eryt=1.539 seve-papu=1.707 eryt-papu=1.753 seve-exco=1.570
+    QWK: seve=0.694 eryt=0.591 papu=0.467 exco=0.599 lich=0.514
+    ±1 : seve=0.980 eryt=0.975 papu=0.945 exco=0.945 lich=0.915   acc: seve=0.660 eryt=0.635 papu=0.440 exco=0.520 lich=0.625
+    th : seve-eryt=+2.43 seve-papu=+1.65 eryt-papu=+1.05 seve-exco=+0.93
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  31/100 IBB a=0.50] tr=0.857 va=1.844 | score=0.611 (mean_QWK=0.560)
+    S1 : seve=0.039 eryt=0.041 papu=0.053 exco=0.050 lich=0.047
+    S2 : seve-eryt=1.526 seve-papu=1.606 eryt-papu=1.665 seve-exco=1.578
+    QWK: seve=0.696 eryt=0.599 papu=0.427 exco=0.568 lich=0.513
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.920 lich=0.945   acc: seve=0.660 eryt=0.610 papu=0.425 exco=0.460 lich=0.555
+    th : seve-eryt=+2.03 seve-papu=+1.25 eryt-papu=+0.92 seve-exco=+1.41
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  32/100 IBB a=0.50] tr=0.880 va=1.822 | score=0.619 (mean_QWK=0.574)
+    S1 : seve=0.038 eryt=0.043 papu=0.051 exco=0.049 lich=0.048
+    S2 : seve-eryt=1.516 seve-papu=1.679 eryt-papu=1.687 seve-exco=1.674
+    QWK: seve=0.694 eryt=0.617 papu=0.458 exco=0.574 lich=0.528
+    ±1 : seve=0.970 eryt=0.980 papu=0.945 exco=0.940 lich=0.940   acc: seve=0.675 eryt=0.630 papu=0.450 exco=0.465 lich=0.585
+    th : seve-eryt=+2.24 seve-papu=+1.22 eryt-papu=+0.98 seve-exco=+1.24
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  33/100 IBB a=0.50] tr=0.870 va=1.860 | score=0.616 (mean_QWK=0.558)
+    S1 : seve=0.043 eryt=0.042 papu=0.049 exco=0.050 lich=0.046
+    S2 : seve-eryt=1.513 seve-papu=1.701 eryt-papu=1.706 seve-exco=1.559
+    QWK: seve=0.712 eryt=0.609 papu=0.442 exco=0.573 lich=0.454
+    ±1 : seve=0.980 eryt=0.985 papu=0.935 exco=0.930 lich=0.895   acc: seve=0.675 eryt=0.610 papu=0.435 exco=0.455 lich=0.595
+    th : seve-eryt=+2.72 seve-papu=+0.87 eryt-papu=+0.93 seve-exco=+0.92
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.02 lich=0.99
+[Ep  34/100 IBB a=0.50] tr=0.874 va=1.824 | score=0.612 (mean_QWK=0.561)
+    S1 : seve=0.042 eryt=0.037 papu=0.051 exco=0.046 lich=0.047
+    S2 : seve-eryt=1.500 seve-papu=1.698 eryt-papu=1.708 seve-exco=1.609
+    QWK: seve=0.696 eryt=0.599 papu=0.424 exco=0.591 lich=0.497
+    ±1 : seve=0.970 eryt=0.980 papu=0.935 exco=0.945 lich=0.920   acc: seve=0.655 eryt=0.615 papu=0.440 exco=0.460 lich=0.610
+    th : seve-eryt=+2.86 seve-papu=+0.78 eryt-papu=+1.04 seve-exco=+1.08
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  35/100 IBB a=0.50] tr=0.856 va=1.808 | score=0.619 (mean_QWK=0.567)
+    S1 : seve=0.040 eryt=0.043 papu=0.054 exco=0.049 lich=0.043
+    S2 : seve-eryt=1.467 seve-papu=1.586 eryt-papu=1.728 seve-exco=1.589
+    QWK: seve=0.707 eryt=0.602 papu=0.444 exco=0.587 lich=0.494
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.940 lich=0.920   acc: seve=0.670 eryt=0.620 papu=0.445 exco=0.495 lich=0.595
+    th : seve-eryt=+2.68 seve-papu=+0.85 eryt-papu=+1.22 seve-exco=+1.17
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  36/100 IBB a=0.50] tr=0.865 va=1.820 | score=0.620 (mean_QWK=0.560)
+    S1 : seve=0.038 eryt=0.044 papu=0.050 exco=0.049 lich=0.045
+    S2 : seve-eryt=1.509 seve-papu=1.601 eryt-papu=1.735 seve-exco=1.598
+    QWK: seve=0.721 eryt=0.599 papu=0.423 exco=0.591 lich=0.468
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.945 lich=0.900   acc: seve=0.680 eryt=0.625 papu=0.415 exco=0.475 lich=0.580
+    th : seve-eryt=+2.55 seve-papu=+1.14 eryt-papu=+0.98 seve-exco=+1.00
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  37/100 IBB a=0.50] tr=0.832 va=1.859 | score=0.617 (mean_QWK=0.563)
+    S1 : seve=0.034 eryt=0.039 papu=0.048 exco=0.047 lich=0.043
+    S2 : seve-eryt=1.387 seve-papu=1.599 eryt-papu=1.643 seve-exco=1.573
+    QWK: seve=0.708 eryt=0.571 papu=0.423 exco=0.591 lich=0.520
+    ±1 : seve=0.970 eryt=0.980 papu=0.935 exco=0.940 lich=0.930   acc: seve=0.640 eryt=0.570 papu=0.430 exco=0.490 lich=0.615
+    th : seve-eryt=+2.64 seve-papu=+1.56 eryt-papu=+0.30 seve-exco=+1.01
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  38/100 IBB a=0.50] tr=0.864 va=1.830 | score=0.619 (mean_QWK=0.570)
+    S1 : seve=0.040 eryt=0.040 papu=0.050 exco=0.046 lich=0.044
+    S2 : seve-eryt=1.500 seve-papu=1.628 eryt-papu=1.705 seve-exco=1.607
+    QWK: seve=0.700 eryt=0.615 papu=0.445 exco=0.610 lich=0.480
+    ±1 : seve=0.975 eryt=0.975 papu=0.935 exco=0.950 lich=0.895   acc: seve=0.680 eryt=0.635 papu=0.450 exco=0.505 lich=0.610
+    th : seve-eryt=+2.33 seve-papu=+1.66 eryt-papu=+0.17 seve-exco=+0.75
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  39/100 IBB a=0.50] tr=0.846 va=1.791 | score=0.640 (mean_QWK=0.586)
+    S1 : seve=0.037 eryt=0.041 papu=0.050 exco=0.049 lich=0.046
+    S2 : seve-eryt=1.458 seve-papu=1.586 eryt-papu=1.719 seve-exco=1.534
+    QWK: seve=0.732 eryt=0.609 papu=0.466 exco=0.609 lich=0.512
+    ±1 : seve=0.975 eryt=0.975 papu=0.945 exco=0.955 lich=0.910   acc: seve=0.700 eryt=0.665 papu=0.480 exco=0.525 lich=0.590
+    th : seve-eryt=+2.29 seve-papu=+1.70 eryt-papu=+0.26 seve-exco=+0.53
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.640)
+[Ep  40/100 IBB a=0.50] tr=0.871 va=1.815 | score=0.633 (mean_QWK=0.586)
+    S1 : seve=0.040 eryt=0.042 papu=0.051 exco=0.048 lich=0.041
+    S2 : seve-eryt=1.542 seve-papu=1.780 eryt-papu=1.685 seve-exco=1.480
+    QWK: seve=0.711 eryt=0.632 papu=0.478 exco=0.610 lich=0.502
+    ±1 : seve=0.970 eryt=0.975 papu=0.955 exco=0.945 lich=0.910   acc: seve=0.710 eryt=0.665 papu=0.455 exco=0.510 lich=0.610
+    th : seve-eryt=+1.84 seve-papu=+1.16 eryt-papu=+0.56 seve-exco=+0.56
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  41/100 IBB a=0.50] tr=0.857 va=1.842 | score=0.617 (mean_QWK=0.568)
+    S1 : seve=0.038 eryt=0.043 papu=0.048 exco=0.048 lich=0.043
+    S2 : seve-eryt=1.494 seve-papu=1.563 eryt-papu=1.731 seve-exco=1.592
+    QWK: seve=0.700 eryt=0.576 papu=0.434 exco=0.590 lich=0.538
+    ±1 : seve=0.975 eryt=0.970 papu=0.930 exco=0.940 lich=0.920   acc: seve=0.680 eryt=0.610 papu=0.430 exco=0.465 lich=0.610
+    th : seve-eryt=+1.70 seve-papu=+0.82 eryt-papu=+0.85 seve-exco=+0.74
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  42/100 IBB a=0.50] tr=0.837 va=1.810 | score=0.635 (mean_QWK=0.579)
+    S1 : seve=0.041 eryt=0.041 papu=0.048 exco=0.049 lich=0.047
+    S2 : seve-eryt=1.432 seve-papu=1.599 eryt-papu=1.653 seve-exco=1.545
+    QWK: seve=0.728 eryt=0.628 papu=0.441 exco=0.595 lich=0.504
+    ±1 : seve=0.975 eryt=0.975 papu=0.935 exco=0.950 lich=0.905   acc: seve=0.705 eryt=0.660 papu=0.440 exco=0.485 lich=0.590
+    th : seve-eryt=+1.92 seve-papu=+0.94 eryt-papu=+0.74 seve-exco=+0.80
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  43/100 IBB a=0.50] tr=0.833 va=1.789 | score=0.628 (mean_QWK=0.577)
+    S1 : seve=0.038 eryt=0.039 papu=0.048 exco=0.047 lich=0.048
+    S2 : seve-eryt=1.455 seve-papu=1.610 eryt-papu=1.666 seve-exco=1.471
+    QWK: seve=0.714 eryt=0.601 papu=0.454 exco=0.603 lich=0.514
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.955 lich=0.915   acc: seve=0.705 eryt=0.645 papu=0.460 exco=0.495 lich=0.590
+    th : seve-eryt=+2.43 seve-papu=+1.12 eryt-papu=+0.62 seve-exco=+0.61
+    σ  : seve=0.99 eryt=0.99 papu=1.01 exco=1.01 lich=0.99
+[Ep  44/100 IBB a=0.50] tr=0.840 va=1.787 | score=0.624 (mean_QWK=0.574)
+    S1 : seve=0.037 eryt=0.041 papu=0.052 exco=0.047 lich=0.042
+    S2 : seve-eryt=1.431 seve-papu=1.606 eryt-papu=1.688 seve-exco=1.528
+    QWK: seve=0.708 eryt=0.598 papu=0.406 exco=0.603 lich=0.556
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.955 lich=0.930   acc: seve=0.690 eryt=0.645 papu=0.435 exco=0.510 lich=0.610
+    th : seve-eryt=+2.90 seve-papu=+0.89 eryt-papu=+0.50 seve-exco=+0.48
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  45/100 IBB a=0.50] tr=0.838 va=1.802 | score=0.632 (mean_QWK=0.570)
+    S1 : seve=0.036 eryt=0.041 papu=0.050 exco=0.049 lich=0.045
+    S2 : seve-eryt=1.424 seve-papu=1.611 eryt-papu=1.671 seve-exco=1.531
+    QWK: seve=0.735 eryt=0.606 papu=0.412 exco=0.581 lich=0.515
+    ±1 : seve=0.980 eryt=0.985 papu=0.945 exco=0.955 lich=0.930   acc: seve=0.720 eryt=0.620 papu=0.425 exco=0.460 lich=0.560
+    th : seve-eryt=+3.26 seve-papu=+0.90 eryt-papu=+0.49 seve-exco=+0.11
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  46/100 IBB a=0.50] tr=0.855 va=1.792 | score=0.616 (mean_QWK=0.564)
+    S1 : seve=0.041 eryt=0.041 papu=0.050 exco=0.046 lich=0.042
+    S2 : seve-eryt=1.494 seve-papu=1.613 eryt-papu=1.702 seve-exco=1.565
+    QWK: seve=0.703 eryt=0.630 papu=0.397 exco=0.586 lich=0.506
+    ±1 : seve=0.975 eryt=0.985 papu=0.925 exco=0.945 lich=0.905   acc: seve=0.690 eryt=0.655 papu=0.430 exco=0.510 lich=0.575
+    th : seve-eryt=+2.86 seve-papu=+1.18 eryt-papu=+0.61 seve-exco=+0.29
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  47/100 IBB a=0.50] tr=0.853 va=1.803 | score=0.624 (mean_QWK=0.565)
+    S1 : seve=0.037 eryt=0.039 papu=0.048 exco=0.045 lich=0.044
+    S2 : seve-eryt=1.508 seve-papu=1.583 eryt-papu=1.659 seve-exco=1.605
+    QWK: seve=0.723 eryt=0.616 papu=0.419 exco=0.577 lich=0.490
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.950 lich=0.925   acc: seve=0.685 eryt=0.645 papu=0.415 exco=0.470 lich=0.555
+    th : seve-eryt=+2.40 seve-papu=+1.06 eryt-papu=+0.86 seve-exco=+0.56
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  48/100 IBB a=0.50] tr=0.832 va=1.821 | score=0.616 (mean_QWK=0.567)
+    S1 : seve=0.039 eryt=0.038 papu=0.052 exco=0.048 lich=0.042
+    S2 : seve-eryt=1.439 seve-papu=1.539 eryt-papu=1.678 seve-exco=1.537
+    QWK: seve=0.700 eryt=0.587 papu=0.412 exco=0.589 lich=0.544
+    ±1 : seve=0.970 eryt=0.980 papu=0.935 exco=0.950 lich=0.930   acc: seve=0.680 eryt=0.610 papu=0.425 exco=0.465 lich=0.605
+    th : seve-eryt=+2.14 seve-papu=+1.15 eryt-papu=+1.01 seve-exco=+0.66
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  49/100 IBB a=0.50] tr=0.826 va=1.766 | score=0.631 (mean_QWK=0.565)
+    S1 : seve=0.037 eryt=0.040 papu=0.051 exco=0.045 lich=0.043
+    S2 : seve-eryt=1.424 seve-papu=1.585 eryt-papu=1.619 seve-exco=1.519
+    QWK: seve=0.742 eryt=0.593 papu=0.404 exco=0.598 lich=0.488
+    ±1 : seve=0.980 eryt=0.980 papu=0.945 exco=0.960 lich=0.900   acc: seve=0.720 eryt=0.635 papu=0.435 exco=0.515 lich=0.575
+    th : seve-eryt=+2.19 seve-papu=+0.93 eryt-papu=+0.96 seve-exco=+0.52
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  50/100 IBB a=0.50] tr=0.818 va=1.780 | score=0.629 (mean_QWK=0.572)
+    S1 : seve=0.035 eryt=0.040 papu=0.046 exco=0.047 lich=0.042
+    S2 : seve-eryt=1.404 seve-papu=1.559 eryt-papu=1.648 seve-exco=1.481
+    QWK: seve=0.724 eryt=0.619 papu=0.428 exco=0.585 lich=0.503
+    ±1 : seve=0.975 eryt=0.980 papu=0.925 exco=0.955 lich=0.890   acc: seve=0.710 eryt=0.660 papu=0.435 exco=0.485 lich=0.610
+    th : seve-eryt=+2.30 seve-papu=+0.72 eryt-papu=+1.04 seve-exco=+0.24
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  51/100 IBB a=0.50] tr=0.844 va=1.805 | score=0.629 (mean_QWK=0.568)
+    S1 : seve=0.036 eryt=0.035 papu=0.049 exco=0.046 lich=0.042
+    S2 : seve-eryt=1.454 seve-papu=1.617 eryt-papu=1.702 seve-exco=1.525
+    QWK: seve=0.731 eryt=0.626 papu=0.398 exco=0.597 lich=0.489
+    ±1 : seve=0.970 eryt=0.985 papu=0.945 exco=0.960 lich=0.910   acc: seve=0.695 eryt=0.640 papu=0.410 exco=0.495 lich=0.585
+    th : seve-eryt=+1.99 seve-papu=+0.50 eryt-papu=+0.66 seve-exco=+0.16
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  52/100 IBB a=0.50] tr=0.801 va=1.784 | score=0.638 (mean_QWK=0.582)
+    S1 : seve=0.038 eryt=0.041 papu=0.052 exco=0.047 lich=0.043
+    S2 : seve-eryt=1.394 seve-papu=1.504 eryt-papu=1.596 seve-exco=1.464
+    QWK: seve=0.731 eryt=0.620 papu=0.442 exco=0.602 lich=0.514
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.950 lich=0.920   acc: seve=0.720 eryt=0.655 papu=0.440 exco=0.510 lich=0.595
+    th : seve-eryt=+1.82 seve-papu=+0.92 eryt-papu=+0.53 seve-exco=+0.47
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  53/100 IBB a=0.50] tr=0.825 va=1.781 | score=0.631 (mean_QWK=0.578)
+    S1 : seve=0.034 eryt=0.040 papu=0.053 exco=0.049 lich=0.042
+    S2 : seve-eryt=1.454 seve-papu=1.596 eryt-papu=1.620 seve-exco=1.474
+    QWK: seve=0.718 eryt=0.630 papu=0.455 exco=0.574 lich=0.516
+    ±1 : seve=0.975 eryt=0.985 papu=0.950 exco=0.940 lich=0.915   acc: seve=0.700 eryt=0.660 papu=0.435 exco=0.505 lich=0.610
+    th : seve-eryt=+1.70 seve-papu=+1.23 eryt-papu=+0.62 seve-exco=+0.59
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  54/100 IBB a=0.50] tr=0.816 va=1.768 | score=0.639 (mean_QWK=0.587)
+    S1 : seve=0.036 eryt=0.039 papu=0.051 exco=0.047 lich=0.044
+    S2 : seve-eryt=1.394 seve-papu=1.518 eryt-papu=1.630 seve-exco=1.535
+    QWK: seve=0.726 eryt=0.606 papu=0.446 exco=0.611 lich=0.545
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.955 lich=0.930   acc: seve=0.705 eryt=0.640 papu=0.435 exco=0.510 lich=0.620
+    th : seve-eryt=+1.80 seve-papu=+1.33 eryt-papu=+0.73 seve-exco=+0.64
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  55/100 IBB a=0.50] tr=0.812 va=1.771 | score=0.637 (mean_QWK=0.580)
+    S1 : seve=0.037 eryt=0.037 papu=0.050 exco=0.047 lich=0.041
+    S2 : seve-eryt=1.379 seve-papu=1.559 eryt-papu=1.626 seve-exco=1.481
+    QWK: seve=0.733 eryt=0.618 papu=0.423 exco=0.590 lich=0.534
+    ±1 : seve=0.975 eryt=0.980 papu=0.925 exco=0.945 lich=0.925   acc: seve=0.705 eryt=0.645 papu=0.440 exco=0.510 lich=0.610
+    th : seve-eryt=+1.87 seve-papu=+1.08 eryt-papu=+1.22 seve-exco=+0.74
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  56/100 IBB a=0.50] tr=0.826 va=1.792 | score=0.641 (mean_QWK=0.585)
+    S1 : seve=0.039 eryt=0.040 papu=0.049 exco=0.046 lich=0.040
+    S2 : seve-eryt=1.382 seve-papu=1.583 eryt-papu=1.653 seve-exco=1.533
+    QWK: seve=0.736 eryt=0.634 papu=0.458 exco=0.578 lich=0.519
+    ±1 : seve=0.970 eryt=0.980 papu=0.945 exco=0.940 lich=0.940   acc: seve=0.720 eryt=0.665 papu=0.440 exco=0.485 lich=0.555
+    th : seve-eryt=+1.63 seve-papu=+0.95 eryt-papu=+0.86 seve-exco=+0.68
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+    -> best 갱신 (score=0.641)
+[Ep  57/100 IBB a=0.50] tr=0.833 va=1.794 | score=0.640 (mean_QWK=0.584)
+    S1 : seve=0.038 eryt=0.035 papu=0.049 exco=0.046 lich=0.045
+    S2 : seve-eryt=1.420 seve-papu=1.636 eryt-papu=1.645 seve-exco=1.505
+    QWK: seve=0.732 eryt=0.625 papu=0.430 exco=0.619 lich=0.514
+    ±1 : seve=0.970 eryt=0.980 papu=0.930 exco=0.955 lich=0.955   acc: seve=0.685 eryt=0.660 papu=0.440 exco=0.510 lich=0.535
+    th : seve-eryt=+1.66 seve-papu=+1.19 eryt-papu=+0.68 seve-exco=+0.47
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  58/100 IBB a=0.50] tr=0.807 va=1.751 | score=0.637 (mean_QWK=0.572)
+    S1 : seve=0.038 eryt=0.039 papu=0.049 exco=0.045 lich=0.043
+    S2 : seve-eryt=1.361 seve-papu=1.592 eryt-papu=1.548 seve-exco=1.507
+    QWK: seve=0.746 eryt=0.609 papu=0.419 exco=0.606 lich=0.482
+    ±1 : seve=0.975 eryt=0.980 papu=0.925 exco=0.960 lich=0.920   acc: seve=0.725 eryt=0.645 papu=0.450 exco=0.510 lich=0.555
+    th : seve-eryt=+1.88 seve-papu=+1.32 eryt-papu=+0.82 seve-exco=+0.30
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  59/100 IBB a=0.50] tr=0.786 va=1.784 | score=0.641 (mean_QWK=0.581)
+    S1 : seve=0.038 eryt=0.035 papu=0.048 exco=0.047 lich=0.041
+    S2 : seve-eryt=1.312 seve-papu=1.538 eryt-papu=1.590 seve-exco=1.412
+    QWK: seve=0.741 eryt=0.605 papu=0.428 exco=0.613 lich=0.520
+    ±1 : seve=0.975 eryt=0.975 papu=0.920 exco=0.955 lich=0.910   acc: seve=0.705 eryt=0.640 papu=0.455 exco=0.510 lich=0.600
+    th : seve-eryt=+2.08 seve-papu=+0.67 eryt-papu=+0.91 seve-exco=+0.00
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  60/100 IBB a=0.50] tr=0.814 va=1.758 | score=0.620 (mean_QWK=0.566)
+    S1 : seve=0.037 eryt=0.037 papu=0.047 exco=0.044 lich=0.042
+    S2 : seve-eryt=1.407 seve-papu=1.609 eryt-papu=1.588 seve-exco=1.458
+    QWK: seve=0.710 eryt=0.586 papu=0.420 exco=0.603 lich=0.510
+    ±1 : seve=0.980 eryt=0.975 papu=0.920 exco=0.950 lich=0.935   acc: seve=0.690 eryt=0.660 papu=0.455 exco=0.515 lich=0.575
+    th : seve-eryt=+2.00 seve-papu=+0.48 eryt-papu=+0.64 seve-exco=-0.35
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  61/100 IBB a=0.50] tr=0.809 va=1.771 | score=0.640 (mean_QWK=0.587)
+    S1 : seve=0.036 eryt=0.038 papu=0.048 exco=0.041 lich=0.041
+    S2 : seve-eryt=1.385 seve-papu=1.570 eryt-papu=1.598 seve-exco=1.477
+    QWK: seve=0.730 eryt=0.591 papu=0.463 exco=0.622 lich=0.528
+    ±1 : seve=0.980 eryt=0.975 papu=0.940 exco=0.960 lich=0.935   acc: seve=0.710 eryt=0.635 papu=0.430 exco=0.540 lich=0.565
+    th : seve-eryt=+1.78 seve-papu=+0.78 eryt-papu=+0.23 seve-exco=-0.36
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  62/100 IBB a=0.50] tr=0.789 va=1.791 | score=0.630 (mean_QWK=0.579)
+    S1 : seve=0.034 eryt=0.036 papu=0.051 exco=0.047 lich=0.041
+    S2 : seve-eryt=1.324 seve-papu=1.567 eryt-papu=1.576 seve-exco=1.402
+    QWK: seve=0.715 eryt=0.605 papu=0.445 exco=0.572 lich=0.557
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.945 lich=0.920   acc: seve=0.680 eryt=0.640 papu=0.450 exco=0.470 lich=0.615
+    th : seve-eryt=+1.91 seve-papu=+1.01 eryt-papu=+0.16 seve-exco=-0.26
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  63/100 IBB a=0.50] tr=0.815 va=1.781 | score=0.624 (mean_QWK=0.573)
+    S1 : seve=0.035 eryt=0.032 papu=0.048 exco=0.043 lich=0.041
+    S2 : seve-eryt=1.365 seve-papu=1.640 eryt-papu=1.585 seve-exco=1.486
+    QWK: seve=0.710 eryt=0.599 papu=0.439 exco=0.588 lich=0.529
+    ±1 : seve=0.975 eryt=0.975 papu=0.935 exco=0.945 lich=0.930   acc: seve=0.695 eryt=0.650 papu=0.435 exco=0.490 lich=0.595
+    th : seve-eryt=+2.38 seve-papu=+1.07 eryt-papu=+0.05 seve-exco=+0.18
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  64/100 IBB a=0.50] tr=0.814 va=1.773 | score=0.624 (mean_QWK=0.572)
+    S1 : seve=0.032 eryt=0.039 papu=0.052 exco=0.043 lich=0.038
+    S2 : seve-eryt=1.363 seve-papu=1.562 eryt-papu=1.671 seve-exco=1.470
+    QWK: seve=0.711 eryt=0.630 papu=0.453 exco=0.564 lich=0.504
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.935 lich=0.900   acc: seve=0.695 eryt=0.665 papu=0.455 exco=0.495 lich=0.615
+    th : seve-eryt=+2.51 seve-papu=+1.07 eryt-papu=+0.25 seve-exco=+0.43
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  65/100 IBB a=0.50] tr=0.793 va=1.830 | score=0.636 (mean_QWK=0.576)
+    S1 : seve=0.036 eryt=0.037 papu=0.048 exco=0.044 lich=0.039
+    S2 : seve-eryt=1.294 seve-papu=1.566 eryt-papu=1.583 seve-exco=1.465
+    QWK: seve=0.735 eryt=0.591 papu=0.438 exco=0.596 lich=0.519
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.950 lich=0.930   acc: seve=0.700 eryt=0.615 papu=0.435 exco=0.480 lich=0.590
+    th : seve-eryt=+2.49 seve-papu=+1.19 eryt-papu=+0.28 seve-exco=+0.62
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  66/100 IBB a=0.50] tr=0.789 va=1.827 | score=0.633 (mean_QWK=0.574)
+    S1 : seve=0.036 eryt=0.036 papu=0.051 exco=0.048 lich=0.043
+    S2 : seve-eryt=1.287 seve-papu=1.563 eryt-papu=1.620 seve-exco=1.397
+    QWK: seve=0.730 eryt=0.549 papu=0.433 exco=0.592 lich=0.569
+    ±1 : seve=0.990 eryt=0.980 papu=0.940 exco=0.955 lich=0.925   acc: seve=0.680 eryt=0.550 papu=0.455 exco=0.500 lich=0.650
+    th : seve-eryt=+2.67 seve-papu=+1.15 eryt-papu=+0.27 seve-exco=+0.68
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  67/100 IBB a=0.50] tr=0.807 va=1.761 | score=0.635 (mean_QWK=0.589)
+    S1 : seve=0.036 eryt=0.039 papu=0.048 exco=0.045 lich=0.039
+    S2 : seve-eryt=1.412 seve-papu=1.585 eryt-papu=1.562 seve-exco=1.451
+    QWK: seve=0.711 eryt=0.624 papu=0.466 exco=0.605 lich=0.541
+    ±1 : seve=0.970 eryt=0.985 papu=0.950 exco=0.955 lich=0.940   acc: seve=0.705 eryt=0.640 papu=0.450 exco=0.515 lich=0.595
+    th : seve-eryt=+2.59 seve-papu=+1.12 eryt-papu=+0.28 seve-exco=+0.60
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  68/100 IBB a=0.50] tr=0.804 va=1.788 | score=0.631 (mean_QWK=0.579)
+    S1 : seve=0.035 eryt=0.035 papu=0.047 exco=0.046 lich=0.038
+    S2 : seve-eryt=1.427 seve-papu=1.473 eryt-papu=1.619 seve-exco=1.478
+    QWK: seve=0.718 eryt=0.585 papu=0.456 exco=0.583 lich=0.554
+    ±1 : seve=0.980 eryt=0.980 papu=0.935 exco=0.940 lich=0.915   acc: seve=0.705 eryt=0.620 papu=0.460 exco=0.490 lich=0.640
+    th : seve-eryt=+2.39 seve-papu=+0.96 eryt-papu=+0.29 seve-exco=+0.65
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  69/100 IBB a=0.50] tr=0.803 va=1.790 | score=0.637 (mean_QWK=0.586)
+    S1 : seve=0.035 eryt=0.036 papu=0.047 exco=0.044 lich=0.039
+    S2 : seve-eryt=1.372 seve-papu=1.576 eryt-papu=1.601 seve-exco=1.432
+    QWK: seve=0.722 eryt=0.614 papu=0.451 exco=0.575 lich=0.569
+    ±1 : seve=0.970 eryt=0.980 papu=0.950 exco=0.940 lich=0.940   acc: seve=0.715 eryt=0.650 papu=0.440 exco=0.480 lich=0.615
+    th : seve-eryt=+1.83 seve-papu=+1.11 eryt-papu=+0.26 seve-exco=+0.68
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  70/100 IBB a=0.50] tr=0.799 va=1.802 | score=0.637 (mean_QWK=0.588)
+    S1 : seve=0.035 eryt=0.036 papu=0.045 exco=0.044 lich=0.039
+    S2 : seve-eryt=1.358 seve-papu=1.512 eryt-papu=1.613 seve-exco=1.471
+    QWK: seve=0.717 eryt=0.625 papu=0.469 exco=0.578 lich=0.554
+    ±1 : seve=0.970 eryt=0.985 papu=0.955 exco=0.940 lich=0.940   acc: seve=0.700 eryt=0.640 papu=0.450 exco=0.495 lich=0.595
+    th : seve-eryt=+1.32 seve-papu=+1.12 eryt-papu=-0.07 seve-exco=+0.79
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  71/100 IBB a=0.50] tr=0.801 va=1.787 | score=0.646 (mean_QWK=0.598)
+    S1 : seve=0.033 eryt=0.036 papu=0.048 exco=0.043 lich=0.037
+    S2 : seve-eryt=1.342 seve-papu=1.531 eryt-papu=1.645 seve-exco=1.453
+    QWK: seve=0.726 eryt=0.637 papu=0.466 exco=0.600 lich=0.561
+    ±1 : seve=0.970 eryt=0.985 papu=0.955 exco=0.950 lich=0.940   acc: seve=0.730 eryt=0.650 papu=0.445 exco=0.510 lich=0.585
+    th : seve-eryt=+1.28 seve-papu=+0.90 eryt-papu=-0.01 seve-exco=+0.69
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+    -> best 갱신 (score=0.646)
+[Ep  72/100 IBB a=0.50] tr=0.797 va=1.796 | score=0.633 (mean_QWK=0.578)
+    S1 : seve=0.036 eryt=0.036 papu=0.050 exco=0.044 lich=0.037
+    S2 : seve-eryt=1.364 seve-papu=1.536 eryt-papu=1.571 seve-exco=1.470
+    QWK: seve=0.726 eryt=0.624 papu=0.470 exco=0.587 lich=0.483
+    ±1 : seve=0.970 eryt=0.985 papu=0.945 exco=0.940 lich=0.910   acc: seve=0.730 eryt=0.635 papu=0.445 exco=0.510 lich=0.565
+    th : seve-eryt=+1.20 seve-papu=+0.84 eryt-papu=-0.06 seve-exco=+0.61
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  73/100 IBB a=0.50] tr=0.777 va=1.778 | score=0.630 (mean_QWK=0.581)
+    S1 : seve=0.035 eryt=0.035 papu=0.045 exco=0.046 lich=0.038
+    S2 : seve-eryt=1.348 seve-papu=1.515 eryt-papu=1.497 seve-exco=1.428
+    QWK: seve=0.714 eryt=0.620 papu=0.457 exco=0.593 lich=0.519
+    ±1 : seve=0.970 eryt=0.980 papu=0.935 exco=0.940 lich=0.905   acc: seve=0.710 eryt=0.655 papu=0.450 exco=0.495 lich=0.620
+    th : seve-eryt=+0.80 seve-papu=+0.64 eryt-papu=+0.52 seve-exco=+0.74
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  74/100 IBB a=0.50] tr=0.783 va=1.757 | score=0.634 (mean_QWK=0.579)
+    S1 : seve=0.037 eryt=0.034 papu=0.049 exco=0.047 lich=0.040
+    S2 : seve-eryt=1.358 seve-papu=1.492 eryt-papu=1.552 seve-exco=1.429
+    QWK: seve=0.725 eryt=0.600 papu=0.451 exco=0.583 lich=0.535
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.945 lich=0.920   acc: seve=0.725 eryt=0.645 papu=0.450 exco=0.490 lich=0.610
+    th : seve-eryt=+1.25 seve-papu=+0.39 eryt-papu=+0.66 seve-exco=+0.80
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  75/100 IBB a=0.50] tr=0.794 va=1.770 | score=0.644 (mean_QWK=0.590)
+    S1 : seve=0.034 eryt=0.036 papu=0.049 exco=0.044 lich=0.038
+    S2 : seve-eryt=1.350 seve-papu=1.487 eryt-papu=1.579 seve-exco=1.504
+    QWK: seve=0.735 eryt=0.617 papu=0.460 exco=0.590 lich=0.545
+    ±1 : seve=0.980 eryt=0.980 papu=0.945 exco=0.955 lich=0.940   acc: seve=0.725 eryt=0.650 papu=0.455 exco=0.490 lich=0.605
+    th : seve-eryt=+1.62 seve-papu=+0.43 eryt-papu=+0.45 seve-exco=+0.56
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  76/100 IBB a=0.50] tr=0.771 va=1.787 | score=0.636 (mean_QWK=0.578)
+    S1 : seve=0.034 eryt=0.034 papu=0.045 exco=0.043 lich=0.040
+    S2 : seve-eryt=1.315 seve-papu=1.489 eryt-papu=1.542 seve-exco=1.397
+    QWK: seve=0.734 eryt=0.614 papu=0.461 exco=0.577 lich=0.502
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.940 lich=0.945   acc: seve=0.735 eryt=0.650 papu=0.450 exco=0.490 lich=0.525
+    th : seve-eryt=+2.06 seve-papu=+0.32 eryt-papu=+0.41 seve-exco=+0.26
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  77/100 IBB a=0.50] tr=0.786 va=1.780 | score=0.638 (mean_QWK=0.579)
+    S1 : seve=0.032 eryt=0.035 papu=0.050 exco=0.041 lich=0.038
+    S2 : seve-eryt=1.415 seve-papu=1.493 eryt-papu=1.533 seve-exco=1.418
+    QWK: seve=0.735 eryt=0.600 papu=0.452 exco=0.551 lich=0.557
+    ±1 : seve=0.980 eryt=0.980 papu=0.930 exco=0.940 lich=0.930   acc: seve=0.725 eryt=0.640 papu=0.455 exco=0.465 lich=0.620
+    th : seve-eryt=+2.37 seve-papu=+0.68 eryt-papu=+0.68 seve-exco=+0.21
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.98
+[Ep  78/100 IBB a=0.50] tr=0.774 va=1.739 | score=0.644 (mean_QWK=0.592)
+    S1 : seve=0.033 eryt=0.036 papu=0.048 exco=0.045 lich=0.037
+    S2 : seve-eryt=1.301 seve-papu=1.564 eryt-papu=1.558 seve-exco=1.345
+    QWK: seve=0.729 eryt=0.626 papu=0.456 exco=0.609 lich=0.541
+    ±1 : seve=0.975 eryt=0.985 papu=0.940 exco=0.960 lich=0.920   acc: seve=0.730 eryt=0.655 papu=0.460 exco=0.500 lich=0.630
+    th : seve-eryt=+2.46 seve-papu=+1.10 eryt-papu=+0.60 seve-exco=+0.37
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  79/100 IBB a=0.50] tr=0.763 va=1.762 | score=0.649 (mean_QWK=0.590)
+    S1 : seve=0.033 eryt=0.039 papu=0.048 exco=0.044 lich=0.038
+    S2 : seve-eryt=1.283 seve-papu=1.490 eryt-papu=1.534 seve-exco=1.371
+    QWK: seve=0.748 eryt=0.614 papu=0.460 exco=0.601 lich=0.530
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.955 lich=0.940   acc: seve=0.750 eryt=0.650 papu=0.455 exco=0.495 lich=0.590
+    th : seve-eryt=+2.47 seve-papu=+1.39 eryt-papu=+0.81 seve-exco=+0.59
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+    -> best 갱신 (score=0.649)
+[Ep  80/100 IBB a=0.50] tr=0.779 va=1.785 | score=0.641 (mean_QWK=0.588)
+    S1 : seve=0.032 eryt=0.035 papu=0.048 exco=0.042 lich=0.036
+    S2 : seve-eryt=1.299 seve-papu=1.506 eryt-papu=1.576 seve-exco=1.428
+    QWK: seve=0.730 eryt=0.630 papu=0.455 exco=0.612 lich=0.512
+    ±1 : seve=0.970 eryt=0.985 papu=0.930 exco=0.955 lich=0.930   acc: seve=0.715 eryt=0.650 papu=0.445 exco=0.495 lich=0.580
+    th : seve-eryt=+2.59 seve-papu=+1.39 eryt-papu=+0.89 seve-exco=+0.58
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  81/100 IBB a=0.50] tr=0.797 va=1.770 | score=0.643 (mean_QWK=0.586)
+    S1 : seve=0.032 eryt=0.033 papu=0.049 exco=0.044 lich=0.038
+    S2 : seve-eryt=1.360 seve-papu=1.538 eryt-papu=1.573 seve-exco=1.469
+    QWK: seve=0.738 eryt=0.617 papu=0.455 exco=0.599 lich=0.519
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.950 lich=0.935   acc: seve=0.730 eryt=0.655 papu=0.445 exco=0.495 lich=0.590
+    th : seve-eryt=+2.32 seve-papu=+1.26 eryt-papu=+0.81 seve-exco=+0.39
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  82/100 IBB a=0.50] tr=0.795 va=1.786 | score=0.630 (mean_QWK=0.578)
+    S1 : seve=0.035 eryt=0.036 papu=0.048 exco=0.044 lich=0.037
+    S2 : seve-eryt=1.322 seve-papu=1.480 eryt-papu=1.629 seve-exco=1.499
+    QWK: seve=0.715 eryt=0.616 papu=0.450 exco=0.601 lich=0.508
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.955 lich=0.930   acc: seve=0.705 eryt=0.655 papu=0.435 exco=0.490 lich=0.575
+    th : seve-eryt=+2.22 seve-papu=+1.28 eryt-papu=+0.36 seve-exco=+0.31
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  83/100 IBB a=0.50] tr=0.774 va=1.780 | score=0.648 (mean_QWK=0.595)
+    S1 : seve=0.032 eryt=0.037 papu=0.049 exco=0.041 lich=0.036
+    S2 : seve-eryt=1.309 seve-papu=1.450 eryt-papu=1.531 seve-exco=1.479
+    QWK: seve=0.735 eryt=0.633 papu=0.454 exco=0.605 lich=0.549
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.955 lich=0.935   acc: seve=0.730 eryt=0.670 papu=0.445 exco=0.495 lich=0.615
+    th : seve-eryt=+2.12 seve-papu=+1.18 eryt-papu=-0.23 seve-exco=+0.20
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  84/100 IBB a=0.50] tr=0.782 va=1.792 | score=0.633 (mean_QWK=0.581)
+    S1 : seve=0.036 eryt=0.035 papu=0.047 exco=0.045 lich=0.038
+    S2 : seve-eryt=1.311 seve-papu=1.513 eryt-papu=1.608 seve-exco=1.395
+    QWK: seve=0.719 eryt=0.606 papu=0.465 exco=0.578 lich=0.535
+    ±1 : seve=0.980 eryt=0.980 papu=0.935 exco=0.945 lich=0.930   acc: seve=0.700 eryt=0.645 papu=0.465 exco=0.480 lich=0.605
+    th : seve-eryt=+1.93 seve-papu=+1.14 eryt-papu=-0.59 seve-exco=+0.55
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  85/100 IBB a=0.50] tr=0.770 va=1.786 | score=0.641 (mean_QWK=0.592)
+    S1 : seve=0.036 eryt=0.036 papu=0.047 exco=0.038 lich=0.036
+    S2 : seve-eryt=1.302 seve-papu=1.508 eryt-papu=1.576 seve-exco=1.352
+    QWK: seve=0.722 eryt=0.600 papu=0.469 exco=0.609 lich=0.560
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.955 lich=0.935   acc: seve=0.715 eryt=0.640 papu=0.465 exco=0.500 lich=0.625
+    th : seve-eryt=+1.72 seve-papu=+1.07 eryt-papu=-0.44 seve-exco=+0.79
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  86/100 IBB a=0.50] tr=0.770 va=1.807 | score=0.641 (mean_QWK=0.586)
+    S1 : seve=0.032 eryt=0.037 papu=0.045 exco=0.041 lich=0.037
+    S2 : seve-eryt=1.283 seve-papu=1.527 eryt-papu=1.605 seve-exco=1.326
+    QWK: seve=0.732 eryt=0.615 papu=0.461 exco=0.586 lich=0.538
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.935 lich=0.930   acc: seve=0.725 eryt=0.640 papu=0.445 exco=0.500 lich=0.590
+    th : seve-eryt=+1.79 seve-papu=+0.75 eryt-papu=+0.19 seve-exco=+0.97
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  87/100 IBB a=0.50] tr=0.771 va=1.765 | score=0.636 (mean_QWK=0.579)
+    S1 : seve=0.035 eryt=0.033 papu=0.047 exco=0.040 lich=0.037
+    S2 : seve-eryt=1.242 seve-papu=1.505 eryt-papu=1.577 seve-exco=1.425
+    QWK: seve=0.731 eryt=0.597 papu=0.461 exco=0.587 lich=0.518
+    ±1 : seve=0.975 eryt=0.980 papu=0.940 exco=0.945 lich=0.930   acc: seve=0.730 eryt=0.640 papu=0.450 exco=0.495 lich=0.570
+    th : seve-eryt=+1.69 seve-papu=+0.50 eryt-papu=+0.51 seve-exco=+0.98
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  88/100 IBB a=0.50] tr=0.774 va=1.770 | score=0.638 (mean_QWK=0.584)
+    S1 : seve=0.033 eryt=0.038 papu=0.047 exco=0.043 lich=0.040
+    S2 : seve-eryt=1.353 seve-papu=1.484 eryt-papu=1.560 seve-exco=1.371
+    QWK: seve=0.729 eryt=0.610 papu=0.457 exco=0.577 lich=0.547
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.940 lich=0.925   acc: seve=0.720 eryt=0.650 papu=0.445 exco=0.495 lich=0.610
+    th : seve-eryt=+1.49 seve-papu=+0.59 eryt-papu=+0.66 seve-exco=+0.62
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  89/100 IBB a=0.50] tr=0.775 va=1.773 | score=0.636 (mean_QWK=0.587)
+    S1 : seve=0.034 eryt=0.036 papu=0.049 exco=0.043 lich=0.037
+    S2 : seve-eryt=1.347 seve-papu=1.521 eryt-papu=1.543 seve-exco=1.367
+    QWK: seve=0.718 eryt=0.613 papu=0.463 exco=0.569 lich=0.569
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.935 lich=0.935   acc: seve=0.710 eryt=0.655 papu=0.450 exco=0.485 lich=0.615
+    th : seve-eryt=+1.37 seve-papu=+0.52 eryt-papu=+0.39 seve-exco=+0.25
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  90/100 IBB a=0.50] tr=0.770 va=1.771 | score=0.641 (mean_QWK=0.586)
+    S1 : seve=0.033 eryt=0.034 papu=0.046 exco=0.042 lich=0.036
+    S2 : seve-eryt=1.306 seve-papu=1.516 eryt-papu=1.543 seve-exco=1.378
+    QWK: seve=0.733 eryt=0.624 papu=0.448 exco=0.586 lich=0.541
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.945 lich=0.930   acc: seve=0.730 eryt=0.660 papu=0.430 exco=0.490 lich=0.610
+    th : seve-eryt=+1.49 seve-papu=+0.26 eryt-papu=+0.69 seve-exco=+0.04
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  91/100 IBB a=0.50] tr=0.768 va=1.773 | score=0.634 (mean_QWK=0.579)
+    S1 : seve=0.030 eryt=0.036 papu=0.045 exco=0.042 lich=0.034
+    S2 : seve-eryt=1.304 seve-papu=1.456 eryt-papu=1.558 seve-exco=1.412
+    QWK: seve=0.726 eryt=0.613 papu=0.459 exco=0.578 lich=0.520
+    ±1 : seve=0.975 eryt=0.980 papu=0.935 exco=0.945 lich=0.925   acc: seve=0.720 eryt=0.655 papu=0.450 exco=0.485 lich=0.595
+    th : seve-eryt=+1.66 seve-papu=+0.16 eryt-papu=+0.51 seve-exco=+0.49
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  92/100 IBB a=0.50] tr=0.765 va=1.768 | score=0.644 (mean_QWK=0.583)
+    S1 : seve=0.032 eryt=0.036 papu=0.049 exco=0.041 lich=0.036
+    S2 : seve-eryt=1.378 seve-papu=1.457 eryt-papu=1.525 seve-exco=1.339
+    QWK: seve=0.744 eryt=0.636 papu=0.447 exco=0.565 lich=0.524
+    ±1 : seve=0.980 eryt=0.985 papu=0.945 exco=0.930 lich=0.935   acc: seve=0.735 eryt=0.665 papu=0.435 exco=0.485 lich=0.580
+    th : seve-eryt=+1.67 seve-papu=+0.18 eryt-papu=+0.27 seve-exco=+0.68
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  93/100 IBB a=0.50] tr=0.794 va=1.767 | score=0.644 (mean_QWK=0.582)
+    S1 : seve=0.033 eryt=0.033 papu=0.045 exco=0.043 lich=0.040
+    S2 : seve-eryt=1.368 seve-papu=1.538 eryt-papu=1.579 seve-exco=1.439
+    QWK: seve=0.749 eryt=0.613 papu=0.448 exco=0.577 lich=0.520
+    ±1 : seve=0.980 eryt=0.980 papu=0.930 exco=0.950 lich=0.925   acc: seve=0.740 eryt=0.655 papu=0.440 exco=0.470 lich=0.595
+    th : seve-eryt=+1.42 seve-papu=+0.68 eryt-papu=-0.08 seve-exco=+0.37
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  94/100 IBB a=0.50] tr=0.790 va=1.782 | score=0.632 (mean_QWK=0.575)
+    S1 : seve=0.034 eryt=0.034 papu=0.047 exco=0.044 lich=0.042
+    S2 : seve-eryt=1.304 seve-papu=1.642 eryt-papu=1.548 seve-exco=1.396
+    QWK: seve=0.727 eryt=0.613 papu=0.456 exco=0.568 lich=0.508
+    ±1 : seve=0.975 eryt=0.980 papu=0.945 exco=0.940 lich=0.930   acc: seve=0.715 eryt=0.655 papu=0.430 exco=0.470 lich=0.570
+    th : seve-eryt=+1.61 seve-papu=+0.60 eryt-papu=+0.08 seve-exco=+0.06
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  95/100 IBB a=0.50] tr=0.766 va=1.822 | score=0.617 (mean_QWK=0.565)
+    S1 : seve=0.033 eryt=0.037 papu=0.048 exco=0.044 lich=0.038
+    S2 : seve-eryt=1.272 seve-papu=1.515 eryt-papu=1.546 seve-exco=1.368
+    QWK: seve=0.704 eryt=0.594 papu=0.449 exco=0.563 lich=0.516
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.935 lich=0.935   acc: seve=0.690 eryt=0.630 papu=0.435 exco=0.470 lich=0.545
+    th : seve-eryt=+1.93 seve-papu=+0.44 eryt-papu=+0.21 seve-exco=+0.22
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  96/100 IBB a=0.50] tr=0.760 va=1.783 | score=0.638 (mean_QWK=0.584)
+    S1 : seve=0.031 eryt=0.034 papu=0.047 exco=0.043 lich=0.037
+    S2 : seve-eryt=1.309 seve-papu=1.471 eryt-papu=1.494 seve-exco=1.387
+    QWK: seve=0.728 eryt=0.633 papu=0.450 exco=0.583 lich=0.524
+    ±1 : seve=0.975 eryt=0.985 papu=0.930 exco=0.940 lich=0.930   acc: seve=0.720 eryt=0.660 papu=0.440 exco=0.495 lich=0.590
+    th : seve-eryt=+1.98 seve-papu=+0.60 eryt-papu=+0.28 seve-exco=+0.67
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  97/100 IBB a=0.50] tr=0.775 va=1.763 | score=0.641 (mean_QWK=0.585)
+    S1 : seve=0.031 eryt=0.034 papu=0.046 exco=0.044 lich=0.040
+    S2 : seve-eryt=1.322 seve-papu=1.495 eryt-papu=1.508 seve-exco=1.448
+    QWK: seve=0.734 eryt=0.617 papu=0.446 exco=0.580 lich=0.547
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.940 lich=0.935   acc: seve=0.730 eryt=0.660 papu=0.435 exco=0.485 lich=0.610
+    th : seve-eryt=+1.74 seve-papu=+0.90 eryt-papu=+0.21 seve-exco=+0.79
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  98/100 IBB a=0.50] tr=0.772 va=1.791 | score=0.635 (mean_QWK=0.580)
+    S1 : seve=0.031 eryt=0.036 papu=0.049 exco=0.042 lich=0.037
+    S2 : seve-eryt=1.320 seve-papu=1.541 eryt-papu=1.520 seve-exco=1.374
+    QWK: seve=0.728 eryt=0.620 papu=0.450 exco=0.562 lich=0.540
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.930 lich=0.935   acc: seve=0.720 eryt=0.655 papu=0.435 exco=0.485 lich=0.600
+    th : seve-eryt=+1.35 seve-papu=+0.69 eryt-papu=+0.39 seve-exco=+0.53
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[Ep  99/100 IBB a=0.50] tr=0.779 va=1.777 | score=0.637 (mean_QWK=0.582)
+    S1 : seve=0.032 eryt=0.039 papu=0.049 exco=0.039 lich=0.034
+    S2 : seve-eryt=1.271 seve-papu=1.506 eryt-papu=1.554 seve-exco=1.477
+    QWK: seve=0.728 eryt=0.614 papu=0.439 exco=0.583 lich=0.548
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.940 lich=0.935   acc: seve=0.720 eryt=0.655 papu=0.425 exco=0.485 lich=0.595
+    th : seve-eryt=+0.97 seve-papu=+0.79 eryt-papu=+0.47 seve-exco=+0.33
+    σ  : seve=0.98 eryt=0.97 papu=1.01 exco=1.00 lich=0.97
+[early stop] val score 20ep 개선 없음 (best ep79=0.649) -> ep99 중단
+
+[TEST] (best ep79)  score=0.607  mean_QWK=0.555
+    QWK: seve=0.694 eryt=0.534 papu=0.423 exco=0.535 lich=0.589
+    ±1 : seve=0.990 eryt=0.960 papu=0.945 exco=0.915 lich=0.965   acc: seve=0.635 eryt=0.630 papu=0.515 exco=0.545 lich=0.645
+[done] /home/work/ogw/classification_crop/runs/M2_ccnnit_s42  val_best=0.649  test_score=0.607 (test_mean_QWK=0.555)
+
+######## [3/4] M2_ocnnit_s43 ########
+[dataset] 샘플 1400개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[ibb] alpha=0.5 cap=4.0x min_cell=5 edge_V>=0.25 edge_loss=pair
+[ibb] 엣지 4개: seve-eryt(V=0.47), seve-papu(V=0.33), eryt-papu(V=0.32), seve-exco(V=0.26)
+[ibb] 에폭당 배치 60 (step1_mult=1.0) (Step1 40 + Step2 20, 자연분포 에폭=44)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[exp] bbox  [model] pvtv2b0 (pvt_v2_b0)  params=3.6M
+[loss] head=CORN(순서형)  결합=Kendall σ 자동가중  ls=0.1
+[Ep   1/100 warmup] tr=1.462 va=1.179 | score=0.305 (mean_QWK=0.296)
+    QWK: seve=0.321 eryt=0.240 papu=0.233 exco=0.328 lich=0.358
+    ±1 : seve=0.915 eryt=0.980 papu=0.940 exco=0.925 lich=0.900   acc: seve=0.460 eryt=0.540 papu=0.520 exco=0.490 lich=0.665
+    σ  : seve=0.99 eryt=0.99 papu=0.99 exco=0.99 lich=0.99
+    -> best 갱신 (score=0.305)
+[Ep   2/100 warmup] tr=1.141 va=1.030 | score=0.539 (mean_QWK=0.500)
+    QWK: seve=0.604 eryt=0.452 papu=0.361 exco=0.612 lich=0.471
+    ±1 : seve=0.995 eryt=1.000 papu=0.965 exco=0.980 lich=0.940   acc: seve=0.610 eryt=0.620 papu=0.470 exco=0.585 lich=0.630
+    σ  : seve=0.99 eryt=0.99 papu=0.99 exco=0.99 lich=0.99
+    -> best 갱신 (score=0.539)
+[Ep   3/100 warmup] tr=1.012 va=0.982 | score=0.538 (mean_QWK=0.442)
+    QWK: seve=0.697 eryt=0.505 papu=0.273 exco=0.577 lich=0.158
+    ±1 : seve=0.990 eryt=0.995 papu=0.955 exco=0.975 lich=0.865   acc: seve=0.680 eryt=0.635 papu=0.460 exco=0.530 lich=0.635
+    σ  : seve=0.98 eryt=0.98 papu=0.98 exco=0.98 lich=0.98
+[Ep   4/100 IBB a=0.50] tr=0.262 va=0.961 | score=0.618 (mean_QWK=0.568)
+    S1 : seve=0.128 eryt=0.164 papu=0.254 exco=0.231 lich=0.302
+    S2 : seve-eryt=0.288 seve-papu=0.367 eryt-papu=0.411 seve-exco=0.354
+    QWK: seve=0.700 eryt=0.554 papu=0.487 exco=0.596 lich=0.504
+    ±1 : seve=0.990 eryt=0.990 papu=0.970 exco=0.970 lich=0.940   acc: seve=0.670 eryt=0.625 papu=0.455 exco=0.530 lich=0.650
+    σ  : seve=0.97 eryt=0.98 papu=0.98 exco=0.98 lich=0.98
+    -> best 갱신 (score=0.618)
+[Ep   5/100 IBB a=0.50] tr=0.239 va=0.967 | score=0.609 (mean_QWK=0.564)
+    S1 : seve=0.112 eryt=0.135 papu=0.230 exco=0.223 lich=0.275
+    S2 : seve-eryt=0.250 seve-papu=0.336 eryt-papu=0.390 seve-exco=0.339
+    QWK: seve=0.685 eryt=0.581 papu=0.466 exco=0.545 lich=0.543
+    ±1 : seve=0.985 eryt=0.990 papu=0.950 exco=0.965 lich=0.930   acc: seve=0.675 eryt=0.650 papu=0.465 exco=0.470 lich=0.640
+    σ  : seve=0.97 eryt=0.97 papu=0.97 exco=0.97 lich=0.98
+[Ep   6/100 IBB a=0.50] tr=0.236 va=0.943 | score=0.610 (mean_QWK=0.561)
+    S1 : seve=0.100 eryt=0.141 papu=0.238 exco=0.221 lich=0.260
+    S2 : seve-eryt=0.263 seve-papu=0.319 eryt-papu=0.409 seve-exco=0.308
+    QWK: seve=0.693 eryt=0.563 papu=0.436 exco=0.605 lich=0.506
+    ±1 : seve=0.985 eryt=0.980 papu=0.955 exco=0.990 lich=0.940   acc: seve=0.660 eryt=0.655 papu=0.445 exco=0.490 lich=0.600
+    σ  : seve=0.97 eryt=0.97 papu=0.97 exco=0.97 lich=0.98
+[Ep   7/100 IBB a=0.50] tr=0.232 va=0.972 | score=0.594 (mean_QWK=0.544)
+    S1 : seve=0.084 eryt=0.152 papu=0.216 exco=0.233 lich=0.248
+    S2 : seve-eryt=0.249 seve-papu=0.355 eryt-papu=0.389 seve-exco=0.300
+    QWK: seve=0.675 eryt=0.536 papu=0.399 exco=0.606 lich=0.505
+    ±1 : seve=0.985 eryt=0.980 papu=0.965 exco=0.980 lich=0.930   acc: seve=0.645 eryt=0.595 papu=0.440 exco=0.500 lich=0.580
+    σ  : seve=0.96 eryt=0.97 papu=0.97 exco=0.97 lich=0.98
+[Ep   8/100 IBB a=0.50] tr=0.216 va=0.957 | score=0.608 (mean_QWK=0.558)
+    S1 : seve=0.073 eryt=0.142 papu=0.219 exco=0.207 lich=0.242
+    S2 : seve-eryt=0.219 seve-papu=0.309 eryt-papu=0.358 seve-exco=0.295
+    QWK: seve=0.691 eryt=0.573 papu=0.430 exco=0.609 lich=0.486
+    ±1 : seve=0.990 eryt=0.980 papu=0.965 exco=0.975 lich=0.925   acc: seve=0.665 eryt=0.640 papu=0.430 exco=0.535 lich=0.520
+    σ  : seve=0.96 eryt=0.96 papu=0.97 exco=0.97 lich=0.97
+[Ep   9/100 IBB a=0.50] tr=0.212 va=1.000 | score=0.581 (mean_QWK=0.540)
+    S1 : seve=0.087 eryt=0.127 papu=0.209 exco=0.223 lich=0.238
+    S2 : seve-eryt=0.210 seve-papu=0.309 eryt-papu=0.332 seve-exco=0.277
+    QWK: seve=0.650 eryt=0.574 papu=0.428 exco=0.549 lich=0.501
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.960 lich=0.915   acc: seve=0.625 eryt=0.615 papu=0.430 exco=0.475 lich=0.580
+    σ  : seve=0.96 eryt=0.96 papu=0.96 exco=0.97 lich=0.97
+[Ep  10/100 IBB a=0.50] tr=0.206 va=0.927 | score=0.599 (mean_QWK=0.547)
+    S1 : seve=0.072 eryt=0.113 papu=0.216 exco=0.214 lich=0.215
+    S2 : seve-eryt=0.189 seve-papu=0.284 eryt-papu=0.368 seve-exco=0.310
+    QWK: seve=0.686 eryt=0.633 papu=0.401 exco=0.552 lich=0.461
+    ±1 : seve=0.985 eryt=1.000 papu=0.955 exco=0.970 lich=0.915   acc: seve=0.660 eryt=0.655 papu=0.475 exco=0.480 lich=0.565
+    σ  : seve=0.95 eryt=0.96 papu=0.96 exco=0.96 lich=0.97
+[Ep  11/100 IBB a=0.50] tr=0.198 va=0.910 | score=0.591 (mean_QWK=0.548)
+    S1 : seve=0.066 eryt=0.113 papu=0.214 exco=0.199 lich=0.223
+    S2 : seve-eryt=0.191 seve-papu=0.281 eryt-papu=0.333 seve-exco=0.264
+    QWK: seve=0.664 eryt=0.601 papu=0.398 exco=0.555 lich=0.522
+    ±1 : seve=0.985 eryt=0.985 papu=0.955 exco=0.965 lich=0.920   acc: seve=0.675 eryt=0.690 papu=0.480 exco=0.530 lich=0.620
+    σ  : seve=0.95 eryt=0.96 papu=0.96 exco=0.96 lich=0.97
+[Ep  12/100 IBB a=0.50] tr=0.196 va=0.965 | score=0.574 (mean_QWK=0.533)
+    S1 : seve=0.058 eryt=0.103 papu=0.196 exco=0.200 lich=0.235
+    S2 : seve-eryt=0.192 seve-papu=0.266 eryt-papu=0.349 seve-exco=0.281
+    QWK: seve=0.642 eryt=0.486 papu=0.408 exco=0.602 lich=0.530
+    ±1 : seve=0.990 eryt=0.980 papu=0.950 exco=0.975 lich=0.920   acc: seve=0.620 eryt=0.585 papu=0.435 exco=0.515 lich=0.575
+    σ  : seve=0.95 eryt=0.95 papu=0.96 exco=0.96 lich=0.97
+[Ep  13/100 IBB a=0.50] tr=0.184 va=0.952 | score=0.606 (mean_QWK=0.554)
+    S1 : seve=0.049 eryt=0.109 papu=0.198 exco=0.193 lich=0.214
+    S2 : seve-eryt=0.177 seve-papu=0.244 eryt-papu=0.322 seve-exco=0.246
+    QWK: seve=0.693 eryt=0.607 papu=0.365 exco=0.619 lich=0.484
+    ±1 : seve=0.985 eryt=0.990 papu=0.955 exco=0.980 lich=0.950   acc: seve=0.695 eryt=0.635 papu=0.395 exco=0.555 lich=0.465
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.96 lich=0.97
+[Ep  14/100 IBB a=0.50] tr=0.177 va=0.873 | score=0.643 (mean_QWK=0.587)
+    S1 : seve=0.050 eryt=0.100 papu=0.174 exco=0.184 lich=0.220
+    S2 : seve-eryt=0.189 seve-papu=0.244 eryt-papu=0.307 seve-exco=0.220
+    QWK: seve=0.736 eryt=0.595 papu=0.433 exco=0.643 lich=0.530
+    ±1 : seve=0.990 eryt=0.990 papu=0.955 exco=0.980 lich=0.920   acc: seve=0.705 eryt=0.655 papu=0.430 exco=0.545 lich=0.585
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.96 lich=0.97
+    -> best 갱신 (score=0.643)
+[Ep  15/100 IBB a=0.50] tr=0.170 va=0.971 | score=0.611 (mean_QWK=0.568)
+    S1 : seve=0.035 eryt=0.101 papu=0.182 exco=0.166 lich=0.222
+    S2 : seve-eryt=0.172 seve-papu=0.218 eryt-papu=0.287 seve-exco=0.238
+    QWK: seve=0.683 eryt=0.572 papu=0.444 exco=0.616 lich=0.527
+    ±1 : seve=0.985 eryt=0.985 papu=0.950 exco=0.980 lich=0.925   acc: seve=0.630 eryt=0.580 papu=0.425 exco=0.470 lich=0.560
+    σ  : seve=0.94 eryt=0.95 papu=0.95 exco=0.95 lich=0.97
+[Ep  16/100 IBB a=0.50] tr=0.169 va=0.898 | score=0.625 (mean_QWK=0.561)
+    S1 : seve=0.036 eryt=0.092 papu=0.176 exco=0.178 lich=0.194
+    S2 : seve-eryt=0.168 seve-papu=0.237 eryt-papu=0.287 seve-exco=0.251
+    QWK: seve=0.731 eryt=0.593 papu=0.385 exco=0.577 lich=0.520
+    ±1 : seve=0.990 eryt=0.990 papu=0.955 exco=0.985 lich=0.920   acc: seve=0.705 eryt=0.615 papu=0.420 exco=0.490 lich=0.600
+    σ  : seve=0.93 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  17/100 IBB a=0.50] tr=0.152 va=0.905 | score=0.628 (mean_QWK=0.562)
+    S1 : seve=0.019 eryt=0.078 papu=0.169 exco=0.171 lich=0.200
+    S2 : seve-eryt=0.134 seve-papu=0.209 eryt-papu=0.260 seve-exco=0.201
+    QWK: seve=0.737 eryt=0.555 papu=0.422 exco=0.584 lich=0.514
+    ±1 : seve=0.990 eryt=0.985 papu=0.955 exco=0.975 lich=0.945   acc: seve=0.705 eryt=0.625 papu=0.425 exco=0.470 lich=0.555
+    σ  : seve=0.93 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  18/100 IBB a=0.50] tr=0.158 va=0.976 | score=0.586 (mean_QWK=0.517)
+    S1 : seve=0.022 eryt=0.074 papu=0.167 exco=0.180 lich=0.203
+    S2 : seve-eryt=0.141 seve-papu=0.225 eryt-papu=0.301 seve-exco=0.198
+    QWK: seve=0.701 eryt=0.481 papu=0.370 exco=0.586 lich=0.446
+    ±1 : seve=0.990 eryt=0.985 papu=0.940 exco=0.975 lich=0.945   acc: seve=0.685 eryt=0.540 papu=0.440 exco=0.520 lich=0.500
+    σ  : seve=0.93 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  19/100 IBB a=0.50] tr=0.148 va=0.928 | score=0.606 (mean_QWK=0.548)
+    S1 : seve=0.022 eryt=0.073 papu=0.173 exco=0.186 lich=0.205
+    S2 : seve-eryt=0.132 seve-papu=0.184 eryt-papu=0.251 seve-exco=0.150
+    QWK: seve=0.703 eryt=0.542 papu=0.409 exco=0.618 lich=0.467
+    ±1 : seve=0.990 eryt=0.985 papu=0.950 exco=0.985 lich=0.945   acc: seve=0.665 eryt=0.575 papu=0.460 exco=0.495 lich=0.495
+    σ  : seve=0.92 eryt=0.94 papu=0.94 exco=0.95 lich=0.96
+[Ep  20/100 IBB a=0.50] tr=0.138 va=0.951 | score=0.568 (mean_QWK=0.522)
+    S1 : seve=0.020 eryt=0.069 papu=0.160 exco=0.173 lich=0.188
+    S2 : seve-eryt=0.087 seve-papu=0.171 eryt-papu=0.222 seve-exco=0.201
+    QWK: seve=0.646 eryt=0.533 papu=0.372 exco=0.615 lich=0.443
+    ±1 : seve=0.975 eryt=0.985 papu=0.930 exco=0.975 lich=0.940   acc: seve=0.645 eryt=0.625 papu=0.425 exco=0.525 lich=0.465
+    σ  : seve=0.92 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  21/100 IBB a=0.50] tr=0.135 va=0.920 | score=0.615 (mean_QWK=0.561)
+    S1 : seve=0.009 eryt=0.064 papu=0.151 exco=0.156 lich=0.197
+    S2 : seve-eryt=0.078 seve-papu=0.178 eryt-papu=0.223 seve-exco=0.214
+    QWK: seve=0.704 eryt=0.609 papu=0.424 exco=0.612 lich=0.457
+    ±1 : seve=0.980 eryt=0.995 papu=0.935 exco=0.970 lich=0.910   acc: seve=0.650 eryt=0.605 papu=0.430 exco=0.500 lich=0.525
+    σ  : seve=0.92 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  22/100 IBB a=0.50] tr=0.125 va=0.901 | score=0.622 (mean_QWK=0.569)
+    S1 : seve=0.015 eryt=0.069 papu=0.155 exco=0.148 lich=0.205
+    S2 : seve-eryt=0.066 seve-papu=0.140 eryt-papu=0.203 seve-exco=0.138
+    QWK: seve=0.710 eryt=0.601 papu=0.389 exco=0.649 lich=0.494
+    ±1 : seve=0.995 eryt=1.000 papu=0.940 exco=0.970 lich=0.945   acc: seve=0.680 eryt=0.605 papu=0.410 exco=0.560 lich=0.500
+    σ  : seve=0.91 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  23/100 IBB a=0.50] tr=0.121 va=0.849 | score=0.605 (mean_QWK=0.549)
+    S1 : seve=0.001 eryt=0.068 papu=0.138 exco=0.152 lich=0.176
+    S2 : seve-eryt=0.079 seve-papu=0.127 eryt-papu=0.233 seve-exco=0.154
+    QWK: seve=0.699 eryt=0.552 papu=0.381 exco=0.578 lich=0.534
+    ±1 : seve=0.985 eryt=0.975 papu=0.940 exco=0.975 lich=0.965   acc: seve=0.675 eryt=0.650 papu=0.475 exco=0.515 lich=0.570
+    σ  : seve=0.91 eryt=0.93 papu=0.93 exco=0.94 lich=0.96
+[Ep  24/100 IBB a=0.50] tr=0.119 va=0.826 | score=0.615 (mean_QWK=0.558)
+    S1 : seve=0.004 eryt=0.058 papu=0.129 exco=0.150 lich=0.180
+    S2 : seve-eryt=0.091 seve-papu=0.125 eryt-papu=0.236 seve-exco=0.144
+    QWK: seve=0.711 eryt=0.584 papu=0.402 exco=0.572 lich=0.519
+    ±1 : seve=0.985 eryt=0.995 papu=0.950 exco=0.955 lich=0.960   acc: seve=0.695 eryt=0.650 papu=0.440 exco=0.480 lich=0.585
+    σ  : seve=0.91 eryt=0.92 papu=0.92 exco=0.94 lich=0.95
+[Ep  25/100 IBB a=0.50] tr=0.117 va=0.835 | score=0.632 (mean_QWK=0.568)
+    S1 : seve=0.002 eryt=0.053 papu=0.148 exco=0.142 lich=0.180
+    S2 : seve-eryt=0.075 seve-papu=0.152 eryt-papu=0.201 seve-exco=0.134
+    QWK: seve=0.738 eryt=0.591 papu=0.383 exco=0.576 lich=0.551
+    ±1 : seve=0.990 eryt=0.995 papu=0.935 exco=0.960 lich=0.940   acc: seve=0.710 eryt=0.640 papu=0.455 exco=0.505 lich=0.630
+    σ  : seve=0.90 eryt=0.92 papu=0.92 exco=0.94 lich=0.95
+[Ep  26/100 IBB a=0.50] tr=0.104 va=0.964 | score=0.601 (mean_QWK=0.530)
+    S1 : seve=0.000 eryt=0.051 papu=0.119 exco=0.136 lich=0.181
+    S2 : seve-eryt=0.052 seve-papu=0.101 eryt-papu=0.196 seve-exco=0.115
+    QWK: seve=0.721 eryt=0.488 papu=0.362 exco=0.578 lich=0.499
+    ±1 : seve=0.990 eryt=0.980 papu=0.925 exco=0.950 lich=0.940   acc: seve=0.700 eryt=0.530 papu=0.420 exco=0.495 lich=0.495
+    σ  : seve=0.90 eryt=0.92 papu=0.92 exco=0.93 lich=0.95
+[Ep  27/100 IBB a=0.50] tr=0.100 va=0.828 | score=0.623 (mean_QWK=0.566)
+    S1 : seve=-0.006 eryt=0.042 papu=0.122 exco=0.146 lich=0.187
+    S2 : seve-eryt=0.043 seve-papu=0.107 eryt-papu=0.146 seve-exco=0.119
+    QWK: seve=0.720 eryt=0.612 papu=0.409 exco=0.572 lich=0.514
+    ±1 : seve=0.985 eryt=1.000 papu=0.940 exco=0.955 lich=0.940   acc: seve=0.690 eryt=0.625 papu=0.460 exco=0.525 lich=0.595
+    σ  : seve=0.90 eryt=0.92 papu=0.92 exco=0.93 lich=0.95
+[Ep  28/100 IBB a=0.50] tr=0.087 va=0.860 | score=0.601 (mean_QWK=0.555)
+    S1 : seve=-0.024 eryt=0.027 papu=0.115 exco=0.138 lich=0.162
+    S2 : seve-eryt=0.021 seve-papu=0.106 eryt-papu=0.152 seve-exco=0.096
+    QWK: seve=0.679 eryt=0.587 papu=0.421 exco=0.595 lich=0.491
+    ±1 : seve=0.975 eryt=0.990 papu=0.940 exco=0.960 lich=0.950   acc: seve=0.675 eryt=0.650 papu=0.415 exco=0.510 lich=0.530
+    σ  : seve=0.90 eryt=0.91 papu=0.92 exco=0.93 lich=0.95
+[Ep  29/100 IBB a=0.50] tr=0.082 va=0.880 | score=0.595 (mean_QWK=0.534)
+    S1 : seve=-0.009 eryt=0.028 papu=0.095 exco=0.115 lich=0.184
+    S2 : seve-eryt=0.017 seve-papu=0.070 eryt-papu=0.143 seve-exco=0.091
+    QWK: seve=0.698 eryt=0.577 papu=0.394 exco=0.574 lich=0.425
+    ±1 : seve=0.965 eryt=0.990 papu=0.940 exco=0.955 lich=0.955   acc: seve=0.720 eryt=0.620 papu=0.425 exco=0.500 lich=0.470
+    σ  : seve=0.89 eryt=0.91 papu=0.91 exco=0.93 lich=0.95
+[Ep  30/100 IBB a=0.50] tr=0.081 va=0.841 | score=0.604 (mean_QWK=0.552)
+    S1 : seve=-0.032 eryt=0.042 papu=0.093 exco=0.112 lich=0.167
+    S2 : seve-eryt=0.012 seve-papu=0.090 eryt-papu=0.189 seve-exco=0.073
+    QWK: seve=0.691 eryt=0.545 papu=0.399 exco=0.584 lich=0.543
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.965 lich=0.950   acc: seve=0.680 eryt=0.640 papu=0.410 exco=0.495 lich=0.575
+    σ  : seve=0.89 eryt=0.91 papu=0.91 exco=0.93 lich=0.95
+[Ep  31/100 IBB a=0.50] tr=0.069 va=0.862 | score=0.607 (mean_QWK=0.549)
+    S1 : seve=-0.039 eryt=0.023 papu=0.092 exco=0.105 lich=0.160
+    S2 : seve-eryt=0.020 seve-papu=0.072 eryt-papu=0.114 seve-exco=0.083
+    QWK: seve=0.703 eryt=0.594 papu=0.385 exco=0.609 lich=0.455
+    ±1 : seve=0.990 eryt=0.990 papu=0.945 exco=0.965 lich=0.945   acc: seve=0.675 eryt=0.640 papu=0.395 exco=0.550 lich=0.535
+    σ  : seve=0.89 eryt=0.91 papu=0.91 exco=0.93 lich=0.95
+[Ep  32/100 IBB a=0.50] tr=0.069 va=0.842 | score=0.633 (mean_QWK=0.561)
+    S1 : seve=-0.037 eryt=0.017 papu=0.104 exco=0.107 lich=0.153
+    S2 : seve-eryt=-0.023 seve-papu=0.064 eryt-papu=0.163 seve-exco=0.074
+    QWK: seve=0.752 eryt=0.632 papu=0.410 exco=0.595 lich=0.414
+    ±1 : seve=0.995 eryt=1.000 papu=0.935 exco=0.970 lich=0.915   acc: seve=0.720 eryt=0.670 papu=0.450 exco=0.510 lich=0.465
+    σ  : seve=0.89 eryt=0.91 papu=0.91 exco=0.92 lich=0.95
+[Ep  33/100 IBB a=0.50] tr=0.050 va=0.911 | score=0.603 (mean_QWK=0.548)
+    S1 : seve=-0.035 eryt=0.010 papu=0.070 exco=0.085 lich=0.150
+    S2 : seve-eryt=-0.039 seve-papu=0.040 eryt-papu=0.093 seve-exco=0.054
+    QWK: seve=0.694 eryt=0.533 papu=0.414 exco=0.607 lich=0.495
+    ±1 : seve=0.985 eryt=0.985 papu=0.920 exco=0.970 lich=0.935   acc: seve=0.670 eryt=0.580 papu=0.460 exco=0.535 lich=0.560
+    σ  : seve=0.88 eryt=0.90 papu=0.90 exco=0.92 lich=0.94
+[Ep  34/100 IBB a=0.50] tr=0.061 va=0.879 | score=0.608 (mean_QWK=0.549)
+    S1 : seve=-0.035 eryt=0.019 papu=0.082 exco=0.101 lich=0.161
+    S2 : seve-eryt=0.002 seve-papu=0.046 eryt-papu=0.107 seve-exco=0.055
+    QWK: seve=0.705 eryt=0.540 papu=0.410 exco=0.589 lich=0.501
+    ±1 : seve=0.990 eryt=0.985 papu=0.930 exco=0.965 lich=0.930   acc: seve=0.675 eryt=0.590 papu=0.445 exco=0.490 lich=0.555
+    σ  : seve=0.88 eryt=0.90 papu=0.90 exco=0.92 lich=0.94
+[early stop] val score 20ep 개선 없음 (best ep14=0.643) -> ep34 중단
+
+[TEST] (best ep14)  score=0.597  mean_QWK=0.547
+    QWK: seve=0.682 eryt=0.511 papu=0.447 exco=0.521 lich=0.571
+    ±1 : seve=0.990 eryt=0.970 papu=0.945 exco=0.950 lich=0.945   acc: seve=0.615 eryt=0.610 papu=0.520 exco=0.530 lich=0.625
+[done] /home/work/ogw/classification_crop/runs/M2_ocnnit_s43  val_best=0.643  test_score=0.597 (test_mean_QWK=0.547)
+
+######## [4/4] M2_ccnnit_s43 ########
+[dataset] 샘플 1400개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[dataset] 샘플 200개  (BBoxCropDataset)
+[ibb] alpha=0.5 cap=4.0x min_cell=5 edge_V>=0.25 edge_loss=pair
+[ibb] 엣지 4개: seve-eryt(V=0.47), seve-papu(V=0.33), eryt-papu(V=0.32), seve-exco(V=0.26)
+[ibb] 에폭당 배치 84 (step1_mult=1.0) (Step1 40 + Step2 44, 자연분포 에폭=44)
+[exp] bbox  [model] pvtv2b0 (pvt_v2_b0)  params=3.6M
+[pairwise] CCNN-IT(3-step)  엣지 4개: seve-eryt, seve-papu, eryt-papu, seve-exco  w_nodes=0.1 unary=nll cut=25.0 shared=True theta_lr=0.02 decode=joint
+[loss] head=CORN(순서형)  결합=Kendall σ 자동가중  ls=0.1
+[Ep   1/100 warmup] tr=3.140 va=2.209 | score=0.401 (mean_QWK=0.322)
+    QWK: seve=0.532 eryt=0.388 papu=0.168 exco=0.366 lich=0.155
+    ±1 : seve=0.955 eryt=0.955 papu=0.920 exco=0.900 lich=0.875   acc: seve=0.580 eryt=0.625 papu=0.480 exco=0.500 lich=0.630
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=1.00
+    -> best 갱신 (score=0.401)
+[Ep   2/100 warmup] tr=2.221 va=1.930 | score=0.509 (mean_QWK=0.440)
+    QWK: seve=0.623 eryt=0.484 papu=0.413 exco=0.519 lich=0.161
+    ±1 : seve=0.990 eryt=0.970 papu=0.980 exco=0.950 lich=0.875   acc: seve=0.615 eryt=0.620 papu=0.430 exco=0.530 lich=0.660
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.01 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.509)
+[Ep   3/100 warmup] tr=1.956 va=1.844 | score=0.541 (mean_QWK=0.457)
+    QWK: seve=0.682 eryt=0.525 papu=0.379 exco=0.501 lich=0.197
+    ±1 : seve=0.995 eryt=0.985 papu=0.965 exco=0.950 lich=0.875   acc: seve=0.650 eryt=0.600 papu=0.470 exco=0.515 lich=0.670
+    th : seve-eryt=+0.06 seve-papu=+0.06 eryt-papu=+0.06 seve-exco=+0.06
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.541)
+[Ep   4/100 IBB a=0.50] tr=0.958 va=1.802 | score=0.546 (mean_QWK=0.453)
+    S1 : seve=0.048 eryt=0.047 papu=0.056 exco=0.053 lich=0.059
+    S2 : seve-eryt=1.681 seve-papu=1.887 eryt-papu=1.873 seve-exco=1.685
+    QWK: seve=0.702 eryt=0.466 papu=0.364 exco=0.585 lich=0.147
+    ±1 : seve=0.975 eryt=0.955 papu=0.935 exco=0.965 lich=0.870   acc: seve=0.710 eryt=0.620 papu=0.495 exco=0.565 lich=0.660
+    th : seve-eryt=+1.04 seve-papu=+1.20 eryt-papu=+0.86 seve-exco=+0.64
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.546)
+[Ep   5/100 IBB a=0.50] tr=0.942 va=1.775 | score=0.579 (mean_QWK=0.503)
+    S1 : seve=0.041 eryt=0.047 papu=0.054 exco=0.057 lich=0.061
+    S2 : seve-eryt=1.690 seve-papu=1.790 eryt-papu=1.784 seve-exco=1.742
+    QWK: seve=0.705 eryt=0.513 papu=0.363 exco=0.559 lich=0.378
+    ±1 : seve=0.980 eryt=0.970 papu=0.935 exco=0.955 lich=0.900   acc: seve=0.705 eryt=0.610 papu=0.470 exco=0.555 lich=0.650
+    th : seve-eryt=+1.80 seve-papu=+1.81 eryt-papu=+1.54 seve-exco=+1.17
+    σ  : seve=1.01 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.579)
+[Ep   6/100 IBB a=0.50] tr=0.915 va=1.780 | score=0.604 (mean_QWK=0.540)
+    S1 : seve=0.045 eryt=0.047 papu=0.057 exco=0.052 lich=0.059
+    S2 : seve-eryt=1.630 seve-papu=1.742 eryt-papu=1.770 seve-exco=1.651
+    QWK: seve=0.709 eryt=0.555 papu=0.423 exco=0.578 lich=0.437
+    ±1 : seve=0.985 eryt=0.975 papu=0.935 exco=0.945 lich=0.890   acc: seve=0.690 eryt=0.630 papu=0.480 exco=0.575 lich=0.635
+    th : seve-eryt=+2.32 seve-papu=+2.07 eryt-papu=+1.44 seve-exco=+1.65
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.604)
+[Ep   7/100 IBB a=0.50] tr=0.943 va=1.780 | score=0.604 (mean_QWK=0.545)
+    S1 : seve=0.044 eryt=0.050 papu=0.052 exco=0.056 lich=0.055
+    S2 : seve-eryt=1.633 seve-papu=1.803 eryt-papu=1.791 seve-exco=1.784
+    QWK: seve=0.703 eryt=0.569 papu=0.413 exco=0.598 lich=0.441
+    ±1 : seve=0.980 eryt=0.980 papu=0.940 exco=0.950 lich=0.895   acc: seve=0.690 eryt=0.625 papu=0.460 exco=0.575 lich=0.630
+    th : seve-eryt=+2.44 seve-papu=+2.11 eryt-papu=+0.94 seve-exco=+1.56
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.604)
+[Ep   8/100 IBB a=0.50] tr=0.895 va=1.779 | score=0.607 (mean_QWK=0.549)
+    S1 : seve=0.041 eryt=0.045 papu=0.053 exco=0.053 lich=0.057
+    S2 : seve-eryt=1.500 seve-papu=1.766 eryt-papu=1.730 seve-exco=1.658
+    QWK: seve=0.702 eryt=0.567 papu=0.424 exco=0.583 lich=0.471
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.945 lich=0.900   acc: seve=0.680 eryt=0.630 papu=0.480 exco=0.550 lich=0.635
+    th : seve-eryt=+2.73 seve-papu=+1.92 eryt-papu=+0.62 seve-exco=+1.09
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.607)
+[Ep   9/100 IBB a=0.50] tr=0.902 va=1.784 | score=0.603 (mean_QWK=0.546)
+    S1 : seve=0.046 eryt=0.046 papu=0.053 exco=0.052 lich=0.053
+    S2 : seve-eryt=1.542 seve-papu=1.712 eryt-papu=1.788 seve-exco=1.662
+    QWK: seve=0.699 eryt=0.574 papu=0.412 exco=0.561 lich=0.484
+    ±1 : seve=0.985 eryt=0.975 papu=0.935 exco=0.935 lich=0.900   acc: seve=0.675 eryt=0.645 papu=0.450 exco=0.545 lich=0.650
+    th : seve-eryt=+2.68 seve-papu=+1.91 eryt-papu=+0.91 seve-exco=+0.67
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  10/100 IBB a=0.50] tr=0.906 va=1.781 | score=0.602 (mean_QWK=0.550)
+    S1 : seve=0.039 eryt=0.046 papu=0.056 exco=0.056 lich=0.051
+    S2 : seve-eryt=1.567 seve-papu=1.672 eryt-papu=1.804 seve-exco=1.693
+    QWK: seve=0.688 eryt=0.563 papu=0.421 exco=0.576 lich=0.501
+    ±1 : seve=0.975 eryt=0.975 papu=0.925 exco=0.945 lich=0.900   acc: seve=0.685 eryt=0.630 papu=0.455 exco=0.525 lich=0.670
+    th : seve-eryt=+2.51 seve-papu=+1.68 eryt-papu=+0.94 seve-exco=+0.43
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  11/100 IBB a=0.50] tr=0.901 va=1.784 | score=0.596 (mean_QWK=0.547)
+    S1 : seve=0.041 eryt=0.045 papu=0.052 exco=0.053 lich=0.052
+    S2 : seve-eryt=1.491 seve-papu=1.793 eryt-papu=1.749 seve-exco=1.672
+    QWK: seve=0.677 eryt=0.571 papu=0.425 exco=0.574 lich=0.487
+    ±1 : seve=0.975 eryt=0.980 papu=0.930 exco=0.940 lich=0.890   acc: seve=0.670 eryt=0.625 papu=0.460 exco=0.525 lich=0.645
+    th : seve-eryt=+2.46 seve-papu=+1.54 eryt-papu=+0.75 seve-exco=+0.34
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  12/100 IBB a=0.50] tr=0.900 va=1.798 | score=0.597 (mean_QWK=0.544)
+    S1 : seve=0.042 eryt=0.040 papu=0.055 exco=0.054 lich=0.047
+    S2 : seve-eryt=1.504 seve-papu=1.692 eryt-papu=1.792 seve-exco=1.711
+    QWK: seve=0.685 eryt=0.585 papu=0.422 exco=0.532 lich=0.494
+    ±1 : seve=0.980 eryt=0.975 papu=0.920 exco=0.935 lich=0.890   acc: seve=0.665 eryt=0.645 papu=0.450 exco=0.500 lich=0.650
+    th : seve-eryt=+2.50 seve-papu=+1.50 eryt-papu=+0.49 seve-exco=+0.35
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  13/100 IBB a=0.50] tr=0.901 va=1.797 | score=0.609 (mean_QWK=0.552)
+    S1 : seve=0.042 eryt=0.043 papu=0.053 exco=0.053 lich=0.049
+    S2 : seve-eryt=1.499 seve-papu=1.717 eryt-papu=1.834 seve-exco=1.657
+    QWK: seve=0.705 eryt=0.555 papu=0.410 exco=0.550 lich=0.538
+    ±1 : seve=0.990 eryt=0.975 papu=0.925 exco=0.940 lich=0.905   acc: seve=0.670 eryt=0.630 papu=0.415 exco=0.520 lich=0.635
+    th : seve-eryt=+2.36 seve-papu=+1.45 eryt-papu=+0.61 seve-exco=+0.56
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.609)
+[Ep  14/100 IBB a=0.50] tr=0.908 va=1.803 | score=0.614 (mean_QWK=0.556)
+    S1 : seve=0.043 eryt=0.044 papu=0.057 exco=0.051 lich=0.050
+    S2 : seve-eryt=1.517 seve-papu=1.751 eryt-papu=1.801 seve-exco=1.688
+    QWK: seve=0.712 eryt=0.590 papu=0.435 exco=0.537 lich=0.505
+    ±1 : seve=0.980 eryt=0.980 papu=0.910 exco=0.935 lich=0.895   acc: seve=0.685 eryt=0.625 papu=0.470 exco=0.500 lich=0.650
+    th : seve-eryt=+2.33 seve-papu=+1.27 eryt-papu=+1.00 seve-exco=+0.46
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.614)
+[Ep  15/100 IBB a=0.50] tr=0.898 va=1.821 | score=0.607 (mean_QWK=0.548)
+    S1 : seve=0.041 eryt=0.044 papu=0.058 exco=0.053 lich=0.051
+    S2 : seve-eryt=1.540 seve-papu=1.736 eryt-papu=1.759 seve-exco=1.639
+    QWK: seve=0.705 eryt=0.584 papu=0.420 exco=0.526 lich=0.506
+    ±1 : seve=0.980 eryt=0.980 papu=0.905 exco=0.930 lich=0.895   acc: seve=0.670 eryt=0.615 papu=0.450 exco=0.500 lich=0.645
+    th : seve-eryt=+2.41 seve-papu=+1.50 eryt-papu=+1.06 seve-exco=+0.48
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  16/100 IBB a=0.50] tr=0.909 va=1.817 | score=0.619 (mean_QWK=0.555)
+    S1 : seve=0.038 eryt=0.042 papu=0.052 exco=0.051 lich=0.049
+    S2 : seve-eryt=1.489 seve-papu=1.764 eryt-papu=1.854 seve-exco=1.667
+    QWK: seve=0.725 eryt=0.564 papu=0.417 exco=0.577 lich=0.493
+    ±1 : seve=0.990 eryt=0.975 papu=0.910 exco=0.940 lich=0.905   acc: seve=0.675 eryt=0.625 papu=0.435 exco=0.505 lich=0.625
+    th : seve-eryt=+2.37 seve-papu=+1.34 eryt-papu=+0.75 seve-exco=+0.80
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.619)
+[Ep  17/100 IBB a=0.50] tr=0.910 va=1.812 | score=0.614 (mean_QWK=0.553)
+    S1 : seve=0.042 eryt=0.041 papu=0.053 exco=0.052 lich=0.051
+    S2 : seve-eryt=1.538 seve-papu=1.733 eryt-papu=1.827 seve-exco=1.675
+    QWK: seve=0.715 eryt=0.596 papu=0.432 exco=0.577 lich=0.446
+    ±1 : seve=0.990 eryt=0.980 papu=0.915 exco=0.945 lich=0.895   acc: seve=0.665 eryt=0.625 papu=0.440 exco=0.505 lich=0.585
+    th : seve-eryt=+2.42 seve-papu=+1.15 eryt-papu=+0.43 seve-exco=+1.12
+    σ  : seve=1.00 eryt=1.00 papu=1.01 exco=1.01 lich=0.99
+[Ep  18/100 IBB a=0.50] tr=0.887 va=1.861 | score=0.596 (mean_QWK=0.538)
+    S1 : seve=0.039 eryt=0.042 papu=0.052 exco=0.053 lich=0.051
+    S2 : seve-eryt=1.569 seve-papu=1.638 eryt-papu=1.764 seve-exco=1.633
+    QWK: seve=0.692 eryt=0.552 papu=0.436 exco=0.562 lich=0.449
+    ±1 : seve=0.980 eryt=0.970 papu=0.910 exco=0.930 lich=0.895   acc: seve=0.645 eryt=0.585 papu=0.450 exco=0.480 lich=0.580
+    th : seve-eryt=+2.56 seve-papu=+1.00 eryt-papu=+0.38 seve-exco=+1.28
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.01 lich=0.99
+[Ep  19/100 IBB a=0.50] tr=0.878 va=1.799 | score=0.608 (mean_QWK=0.552)
+    S1 : seve=0.039 eryt=0.042 papu=0.052 exco=0.051 lich=0.049
+    S2 : seve-eryt=1.512 seve-papu=1.700 eryt-papu=1.790 seve-exco=1.532
+    QWK: seve=0.702 eryt=0.569 papu=0.436 exco=0.575 lich=0.476
+    ±1 : seve=0.980 eryt=0.980 papu=0.925 exco=0.940 lich=0.920   acc: seve=0.655 eryt=0.615 papu=0.445 exco=0.525 lich=0.615
+    th : seve-eryt=+2.40 seve-papu=+0.89 eryt-papu=+0.62 seve-exco=+1.35
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.01 lich=0.99
+[Ep  20/100 IBB a=0.50] tr=0.888 va=1.816 | score=0.606 (mean_QWK=0.555)
+    S1 : seve=0.046 eryt=0.041 papu=0.051 exco=0.053 lich=0.046
+    S2 : seve-eryt=1.473 seve-papu=1.689 eryt-papu=1.760 seve-exco=1.684
+    QWK: seve=0.691 eryt=0.575 papu=0.431 exco=0.591 lich=0.490
+    ±1 : seve=0.980 eryt=0.980 papu=0.920 exco=0.940 lich=0.920   acc: seve=0.655 eryt=0.605 papu=0.455 exco=0.525 lich=0.620
+    th : seve-eryt=+2.38 seve-papu=+1.12 eryt-papu=+0.83 seve-exco=+1.27
+    σ  : seve=1.00 eryt=1.00 papu=1.02 exco=1.01 lich=0.99
+[Ep  21/100 IBB a=0.50] tr=0.870 va=1.837 | score=0.596 (mean_QWK=0.543)
+    S1 : seve=0.042 eryt=0.041 papu=0.054 exco=0.049 lich=0.052
+    S2 : seve-eryt=1.528 seve-papu=1.647 eryt-papu=1.668 seve-exco=1.625
+    QWK: seve=0.684 eryt=0.566 papu=0.427 exco=0.568 lich=0.470
+    ±1 : seve=0.980 eryt=0.975 papu=0.915 exco=0.940 lich=0.905   acc: seve=0.660 eryt=0.600 papu=0.445 exco=0.485 lich=0.615
+    th : seve-eryt=+2.47 seve-papu=+1.39 eryt-papu=+0.70 seve-exco=+1.08
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  22/100 IBB a=0.50] tr=0.889 va=1.797 | score=0.627 (mean_QWK=0.568)
+    S1 : seve=0.037 eryt=0.042 papu=0.051 exco=0.050 lich=0.045
+    S2 : seve-eryt=1.532 seve-papu=1.687 eryt-papu=1.749 seve-exco=1.658
+    QWK: seve=0.724 eryt=0.592 papu=0.455 exco=0.563 lich=0.508
+    ±1 : seve=0.990 eryt=0.985 papu=0.930 exco=0.935 lich=0.915   acc: seve=0.680 eryt=0.635 papu=0.445 exco=0.505 lich=0.620
+    th : seve-eryt=+2.89 seve-papu=+1.43 eryt-papu=+0.94 seve-exco=+1.06
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.627)
+[Ep  23/100 IBB a=0.50] tr=0.880 va=1.816 | score=0.622 (mean_QWK=0.562)
+    S1 : seve=0.037 eryt=0.043 papu=0.057 exco=0.050 lich=0.046
+    S2 : seve-eryt=1.541 seve-papu=1.645 eryt-papu=1.774 seve-exco=1.592
+    QWK: seve=0.721 eryt=0.570 papu=0.447 exco=0.558 lich=0.514
+    ±1 : seve=0.995 eryt=0.980 papu=0.940 exco=0.935 lich=0.915   acc: seve=0.665 eryt=0.630 papu=0.430 exco=0.475 lich=0.635
+    th : seve-eryt=+3.05 seve-papu=+1.27 eryt-papu=+1.34 seve-exco=+1.02
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  24/100 IBB a=0.50] tr=0.874 va=1.858 | score=0.631 (mean_QWK=0.570)
+    S1 : seve=0.039 eryt=0.042 papu=0.053 exco=0.050 lich=0.045
+    S2 : seve-eryt=1.550 seve-papu=1.610 eryt-papu=1.671 seve-exco=1.677
+    QWK: seve=0.734 eryt=0.593 papu=0.451 exco=0.558 lich=0.515
+    ±1 : seve=0.990 eryt=0.985 papu=0.925 exco=0.930 lich=0.910   acc: seve=0.690 eryt=0.600 papu=0.435 exco=0.470 lich=0.625
+    th : seve-eryt=+2.68 seve-papu=+1.26 eryt-papu=+1.25 seve-exco=+0.66
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.631)
+[Ep  25/100 IBB a=0.50] tr=0.855 va=1.820 | score=0.631 (mean_QWK=0.574)
+    S1 : seve=0.042 eryt=0.041 papu=0.053 exco=0.051 lich=0.046
+    S2 : seve-eryt=1.434 seve-papu=1.594 eryt-papu=1.791 seve-exco=1.544
+    QWK: seve=0.726 eryt=0.603 papu=0.436 exco=0.588 lich=0.516
+    ±1 : seve=0.990 eryt=0.985 papu=0.925 exco=0.940 lich=0.910   acc: seve=0.685 eryt=0.625 papu=0.415 exco=0.505 lich=0.640
+    th : seve-eryt=+2.45 seve-papu=+1.18 eryt-papu=+1.04 seve-exco=+0.28
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  26/100 IBB a=0.50] tr=0.869 va=1.859 | score=0.624 (mean_QWK=0.569)
+    S1 : seve=0.041 eryt=0.040 papu=0.053 exco=0.050 lich=0.049
+    S2 : seve-eryt=1.534 seve-papu=1.649 eryt-papu=1.723 seve-exco=1.559
+    QWK: seve=0.717 eryt=0.604 papu=0.434 exco=0.583 lich=0.507
+    ±1 : seve=0.985 eryt=0.980 papu=0.925 exco=0.930 lich=0.905   acc: seve=0.670 eryt=0.625 papu=0.415 exco=0.490 lich=0.655
+    th : seve-eryt=+2.49 seve-papu=+1.20 eryt-papu=+0.91 seve-exco=+0.13
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  27/100 IBB a=0.50] tr=0.871 va=1.850 | score=0.622 (mean_QWK=0.561)
+    S1 : seve=0.039 eryt=0.048 papu=0.052 exco=0.049 lich=0.045
+    S2 : seve-eryt=1.524 seve-papu=1.673 eryt-papu=1.726 seve-exco=1.558
+    QWK: seve=0.724 eryt=0.587 papu=0.415 exco=0.589 lich=0.490
+    ±1 : seve=0.990 eryt=0.985 papu=0.915 exco=0.930 lich=0.910   acc: seve=0.675 eryt=0.590 papu=0.410 exco=0.480 lich=0.620
+    th : seve-eryt=+2.75 seve-papu=+1.52 eryt-papu=+0.97 seve-exco=+0.38
+    σ  : seve=1.00 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  28/100 IBB a=0.50] tr=0.886 va=1.927 | score=0.605 (mean_QWK=0.546)
+    S1 : seve=0.039 eryt=0.039 papu=0.052 exco=0.048 lich=0.049
+    S2 : seve-eryt=1.546 seve-papu=1.681 eryt-papu=1.746 seve-exco=1.626
+    QWK: seve=0.705 eryt=0.562 papu=0.403 exco=0.572 lich=0.488
+    ±1 : seve=0.985 eryt=0.975 papu=0.900 exco=0.915 lich=0.905   acc: seve=0.645 eryt=0.570 papu=0.405 exco=0.460 lich=0.595
+    th : seve-eryt=+2.65 seve-papu=+1.47 eryt-papu=+1.26 seve-exco=+0.59
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  29/100 IBB a=0.50] tr=0.858 va=1.833 | score=0.643 (mean_QWK=0.582)
+    S1 : seve=0.037 eryt=0.041 papu=0.050 exco=0.051 lich=0.045
+    S2 : seve-eryt=1.496 seve-papu=1.624 eryt-papu=1.752 seve-exco=1.520
+    QWK: seve=0.744 eryt=0.597 papu=0.459 exco=0.596 lich=0.513
+    ±1 : seve=0.985 eryt=0.980 papu=0.925 exco=0.930 lich=0.920   acc: seve=0.695 eryt=0.635 papu=0.435 exco=0.485 lich=0.625
+    th : seve-eryt=+2.53 seve-papu=+1.52 eryt-papu=+1.15 seve-exco=+0.89
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+    -> best 갱신 (score=0.643)
+[Ep  30/100 IBB a=0.50] tr=0.855 va=1.879 | score=0.610 (mean_QWK=0.545)
+    S1 : seve=0.037 eryt=0.041 papu=0.052 exco=0.049 lich=0.045
+    S2 : seve-eryt=1.468 seve-papu=1.626 eryt-papu=1.728 seve-exco=1.543
+    QWK: seve=0.719 eryt=0.556 papu=0.422 exco=0.569 lich=0.457
+    ±1 : seve=0.985 eryt=0.975 papu=0.915 exco=0.905 lich=0.915   acc: seve=0.675 eryt=0.575 papu=0.410 exco=0.455 lich=0.560
+    th : seve-eryt=+2.14 seve-papu=+1.04 eryt-papu=+1.00 seve-exco=+1.40
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  31/100 IBB a=0.50] tr=0.867 va=1.893 | score=0.602 (mean_QWK=0.544)
+    S1 : seve=0.039 eryt=0.041 papu=0.049 exco=0.049 lich=0.045
+    S2 : seve-eryt=1.443 seve-papu=1.663 eryt-papu=1.718 seve-exco=1.636
+    QWK: seve=0.699 eryt=0.582 papu=0.428 exco=0.561 lich=0.451
+    ±1 : seve=0.990 eryt=0.980 papu=0.905 exco=0.905 lich=0.905   acc: seve=0.635 eryt=0.590 papu=0.430 exco=0.425 lich=0.550
+    th : seve-eryt=+1.95 seve-papu=+1.10 eryt-papu=+1.13 seve-exco=+1.13
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  32/100 IBB a=0.50] tr=0.866 va=1.895 | score=0.617 (mean_QWK=0.553)
+    S1 : seve=0.041 eryt=0.043 papu=0.050 exco=0.047 lich=0.046
+    S2 : seve-eryt=1.536 seve-papu=1.700 eryt-papu=1.668 seve-exco=1.540
+    QWK: seve=0.725 eryt=0.581 papu=0.452 exco=0.582 lich=0.425
+    ±1 : seve=0.985 eryt=0.980 papu=0.915 exco=0.920 lich=0.880   acc: seve=0.675 eryt=0.595 papu=0.440 exco=0.450 lich=0.565
+    th : seve-eryt=+2.16 seve-papu=+0.82 eryt-papu=+1.02 seve-exco=+0.74
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  33/100 IBB a=0.50] tr=0.866 va=1.870 | score=0.630 (mean_QWK=0.567)
+    S1 : seve=0.041 eryt=0.035 papu=0.049 exco=0.046 lich=0.048
+    S2 : seve-eryt=1.464 seve-papu=1.701 eryt-papu=1.692 seve-exco=1.599
+    QWK: seve=0.734 eryt=0.590 papu=0.461 exco=0.589 lich=0.460
+    ±1 : seve=0.985 eryt=0.980 papu=0.940 exco=0.925 lich=0.895   acc: seve=0.675 eryt=0.595 papu=0.445 exco=0.445 lich=0.590
+    th : seve-eryt=+2.26 seve-papu=+0.81 eryt-papu=+0.97 seve-exco=+1.00
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  34/100 IBB a=0.50] tr=0.847 va=1.830 | score=0.636 (mean_QWK=0.575)
+    S1 : seve=0.038 eryt=0.042 papu=0.053 exco=0.046 lich=0.042
+    S2 : seve-eryt=1.462 seve-papu=1.605 eryt-papu=1.711 seve-exco=1.530
+    QWK: seve=0.738 eryt=0.602 papu=0.451 exco=0.615 lich=0.471
+    ±1 : seve=0.980 eryt=0.975 papu=0.935 exco=0.930 lich=0.895   acc: seve=0.700 eryt=0.630 papu=0.415 exco=0.485 lich=0.585
+    th : seve-eryt=+2.29 seve-papu=+0.93 eryt-papu=+1.01 seve-exco=+1.01
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  35/100 IBB a=0.50] tr=0.848 va=1.869 | score=0.619 (mean_QWK=0.561)
+    S1 : seve=0.039 eryt=0.040 papu=0.052 exco=0.050 lich=0.043
+    S2 : seve-eryt=1.482 seve-papu=1.565 eryt-papu=1.688 seve-exco=1.574
+    QWK: seve=0.717 eryt=0.587 papu=0.462 exco=0.588 lich=0.451
+    ±1 : seve=0.985 eryt=0.980 papu=0.920 exco=0.920 lich=0.880   acc: seve=0.665 eryt=0.600 papu=0.450 exco=0.475 lich=0.575
+    th : seve-eryt=+2.52 seve-papu=+1.20 eryt-papu=+0.72 seve-exco=+0.75
+    σ  : seve=0.99 eryt=0.99 papu=1.02 exco=1.01 lich=0.99
+[Ep  36/100 IBB a=0.50] tr=0.831 va=1.895 | score=0.610 (mean_QWK=0.545)
+    S1 : seve=0.034 eryt=0.038 papu=0.049 exco=0.046 lich=0.045
+    S2 : seve-eryt=1.384 seve-papu=1.613 eryt-papu=1.639 seve-exco=1.555
+    QWK: seve=0.719 eryt=0.549 papu=0.446 exco=0.601 lich=0.412
+    ±1 : seve=0.980 eryt=0.975 papu=0.920 exco=0.920 lich=0.850   acc: seve=0.675 eryt=0.545 papu=0.425 exco=0.475 lich=0.560
+    th : seve-eryt=+2.72 seve-papu=+1.50 eryt-papu=+0.39 seve-exco=+0.87
+    σ  : seve=0.99 eryt=0.98 papu=1.02 exco=1.01 lich=0.99
+[Ep  37/100 IBB a=0.50] tr=0.857 va=1.833 | score=0.636 (mean_QWK=0.573)
+    S1 : seve=0.040 eryt=0.038 papu=0.049 exco=0.047 lich=0.045
+    S2 : seve-eryt=1.466 seve-papu=1.639 eryt-papu=1.697 seve-exco=1.586
+    QWK: seve=0.741 eryt=0.592 papu=0.463 exco=0.617 lich=0.454
+    ±1 : seve=0.985 eryt=0.975 papu=0.930 exco=0.935 lich=0.865   acc: seve=0.700 eryt=0.620 papu=0.445 exco=0.500 lich=0.585
+    th : seve-eryt=+2.37 seve-papu=+1.40 eryt-papu=+0.50 seve-exco=+0.69
+    σ  : seve=0.99 eryt=0.98 papu=1.02 exco=1.01 lich=0.99
+[Ep  38/100 IBB a=0.50] tr=0.838 va=1.806 | score=0.631 (mean_QWK=0.565)
+    S1 : seve=0.034 eryt=0.038 papu=0.049 exco=0.048 lich=0.048
+    S2 : seve-eryt=1.465 seve-papu=1.571 eryt-papu=1.695 seve-exco=1.507
+    QWK: seve=0.740 eryt=0.571 papu=0.462 exco=0.599 lich=0.454
+    ±1 : seve=0.980 eryt=0.975 papu=0.935 exco=0.935 lich=0.875   acc: seve=0.710 eryt=0.620 papu=0.430 exco=0.500 lich=0.590
+    th : seve-eryt=+2.45 seve-papu=+1.34 eryt-papu=+0.40 seve-exco=+0.46
+    σ  : seve=0.99 eryt=0.98 papu=1.02 exco=1.01 lich=0.99
+[Ep  39/100 IBB a=0.50] tr=0.860 va=1.831 | score=0.642 (mean_QWK=0.588)
+    S1 : seve=0.039 eryt=0.041 papu=0.050 exco=0.048 lich=0.043
+    S2 : seve-eryt=1.523 seve-papu=1.723 eryt-papu=1.666 seve-exco=1.493
+    QWK: seve=0.730 eryt=0.618 papu=0.468 exco=0.624 lich=0.501
+    ±1 : seve=0.985 eryt=0.980 papu=0.925 exco=0.945 lich=0.900   acc: seve=0.690 eryt=0.645 papu=0.445 exco=0.495 lich=0.600
+    th : seve-eryt=+2.19 seve-papu=+0.97 eryt-papu=+0.48 seve-exco=+0.57
+    σ  : seve=0.99 eryt=0.98 papu=1.02 exco=1.01 lich=0.99
+[Ep  40/100 IBB a=0.50] tr=0.842 va=1.909 | score=0.610 (mean_QWK=0.552)
+    S1 : seve=0.039 eryt=0.042 papu=0.049 exco=0.047 lich=0.043
+    S2 : seve-eryt=1.469 seve-papu=1.557 eryt-papu=1.737 seve-exco=1.505
+    QWK: seve=0.707 eryt=0.562 papu=0.453 exco=0.573 lich=0.466
+    ±1 : seve=0.985 eryt=0.975 papu=0.910 exco=0.910 lich=0.875   acc: seve=0.670 eryt=0.600 papu=0.450 exco=0.445 lich=0.550
+    th : seve-eryt=+1.97 seve-papu=+0.65 eryt-papu=+0.69 seve-exco=+0.71
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  41/100 IBB a=0.50] tr=0.825 va=1.833 | score=0.621 (mean_QWK=0.564)
+    S1 : seve=0.040 eryt=0.041 papu=0.048 exco=0.049 lich=0.047
+    S2 : seve-eryt=1.426 seve-papu=1.552 eryt-papu=1.632 seve-exco=1.527
+    QWK: seve=0.715 eryt=0.599 papu=0.459 exco=0.568 lich=0.481
+    ±1 : seve=0.990 eryt=0.975 papu=0.935 exco=0.920 lich=0.875   acc: seve=0.670 eryt=0.650 papu=0.430 exco=0.455 lich=0.600
+    th : seve-eryt=+2.14 seve-papu=+0.75 eryt-papu=+0.52 seve-exco=+0.68
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  42/100 IBB a=0.50] tr=0.826 va=1.841 | score=0.617 (mean_QWK=0.561)
+    S1 : seve=0.038 eryt=0.038 papu=0.049 exco=0.047 lich=0.049
+    S2 : seve-eryt=1.446 seve-papu=1.600 eryt-papu=1.663 seve-exco=1.439
+    QWK: seve=0.711 eryt=0.570 papu=0.451 exco=0.594 lich=0.479
+    ±1 : seve=0.985 eryt=0.975 papu=0.930 exco=0.925 lich=0.895   acc: seve=0.680 eryt=0.635 papu=0.440 exco=0.490 lich=0.570
+    th : seve-eryt=+2.39 seve-papu=+0.92 eryt-papu=+0.21 seve-exco=+0.63
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  43/100 IBB a=0.50] tr=0.838 va=1.841 | score=0.622 (mean_QWK=0.567)
+    S1 : seve=0.038 eryt=0.041 papu=0.049 exco=0.046 lich=0.041
+    S2 : seve-eryt=1.447 seve-papu=1.553 eryt-papu=1.706 seve-exco=1.535
+    QWK: seve=0.713 eryt=0.593 papu=0.456 exco=0.576 lich=0.497
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.935 lich=0.895   acc: seve=0.675 eryt=0.645 papu=0.435 exco=0.505 lich=0.600
+    th : seve-eryt=+2.71 seve-papu=+0.52 eryt-papu=+0.18 seve-exco=+0.58
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  44/100 IBB a=0.50] tr=0.837 va=1.835 | score=0.621 (mean_QWK=0.565)
+    S1 : seve=0.035 eryt=0.040 papu=0.049 exco=0.048 lich=0.045
+    S2 : seve-eryt=1.422 seve-papu=1.640 eryt-papu=1.675 seve-exco=1.497
+    QWK: seve=0.713 eryt=0.627 papu=0.458 exco=0.583 lich=0.445
+    ±1 : seve=0.985 eryt=0.980 papu=0.930 exco=0.925 lich=0.890   acc: seve=0.675 eryt=0.660 papu=0.440 exco=0.480 lich=0.530
+    th : seve-eryt=+2.86 seve-papu=+0.70 eryt-papu=+0.41 seve-exco=+0.15
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.99
+[Ep  45/100 IBB a=0.50] tr=0.839 va=1.897 | score=0.607 (mean_QWK=0.553)
+    S1 : seve=0.037 eryt=0.040 papu=0.048 exco=0.044 lich=0.042
+    S2 : seve-eryt=1.488 seve-papu=1.602 eryt-papu=1.652 seve-exco=1.511
+    QWK: seve=0.696 eryt=0.599 papu=0.469 exco=0.569 lich=0.435
+    ±1 : seve=0.980 eryt=0.980 papu=0.920 exco=0.910 lich=0.875   acc: seve=0.645 eryt=0.640 papu=0.460 exco=0.465 lich=0.530
+    th : seve-eryt=+2.54 seve-papu=+1.18 eryt-papu=+0.63 seve-exco=+0.57
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  46/100 IBB a=0.50] tr=0.838 va=1.843 | score=0.626 (mean_QWK=0.560)
+    S1 : seve=0.036 eryt=0.037 papu=0.049 exco=0.047 lich=0.043
+    S2 : seve-eryt=1.485 seve-papu=1.621 eryt-papu=1.612 seve-exco=1.525
+    QWK: seve=0.737 eryt=0.582 papu=0.418 exco=0.619 lich=0.443
+    ±1 : seve=0.985 eryt=0.975 papu=0.915 exco=0.935 lich=0.890   acc: seve=0.680 eryt=0.620 papu=0.435 exco=0.485 lich=0.540
+    th : seve-eryt=+2.01 seve-papu=+1.13 eryt-papu=+0.71 seve-exco=+0.91
+    σ  : seve=0.99 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  47/100 IBB a=0.50] tr=0.823 va=1.859 | score=0.613 (mean_QWK=0.554)
+    S1 : seve=0.037 eryt=0.040 papu=0.049 exco=0.046 lich=0.042
+    S2 : seve-eryt=1.422 seve-papu=1.542 eryt-papu=1.701 seve-exco=1.466
+    QWK: seve=0.712 eryt=0.558 papu=0.445 exco=0.571 lich=0.483
+    ±1 : seve=0.985 eryt=0.975 papu=0.920 exco=0.910 lich=0.890   acc: seve=0.675 eryt=0.600 papu=0.450 exco=0.470 lich=0.595
+    th : seve-eryt=+1.72 seve-papu=+1.11 eryt-papu=+0.89 seve-exco=+1.07
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.01 lich=0.98
+[Ep  48/100 IBB a=0.50] tr=0.815 va=1.832 | score=0.619 (mean_QWK=0.552)
+    S1 : seve=0.037 eryt=0.039 papu=0.047 exco=0.044 lich=0.044
+    S2 : seve-eryt=1.421 seve-papu=1.557 eryt-papu=1.602 seve-exco=1.490
+    QWK: seve=0.731 eryt=0.558 papu=0.430 exco=0.588 lich=0.454
+    ±1 : seve=0.985 eryt=0.975 papu=0.930 exco=0.925 lich=0.875   acc: seve=0.710 eryt=0.620 papu=0.425 exco=0.500 lich=0.580
+    th : seve-eryt=+1.74 seve-papu=+0.99 eryt-papu=+0.93 seve-exco=+0.84
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[Ep  49/100 IBB a=0.50] tr=0.804 va=1.810 | score=0.634 (mean_QWK=0.578)
+    S1 : seve=0.036 eryt=0.039 papu=0.046 exco=0.047 lich=0.041
+    S2 : seve-eryt=1.372 seve-papu=1.556 eryt-papu=1.629 seve-exco=1.429
+    QWK: seve=0.729 eryt=0.605 papu=0.462 exco=0.592 lich=0.502
+    ±1 : seve=0.980 eryt=0.980 papu=0.930 exco=0.950 lich=0.890   acc: seve=0.710 eryt=0.635 papu=0.425 exco=0.505 lich=0.620
+    th : seve-eryt=+2.06 seve-papu=+0.77 eryt-papu=+1.06 seve-exco=+0.45
+    σ  : seve=0.98 eryt=0.98 papu=1.01 exco=1.00 lich=0.98
+[early stop] val score 20ep 개선 없음 (best ep29=0.643) -> ep49 중단
+
+[TEST] (best ep29)  score=0.598  mean_QWK=0.538
+    QWK: seve=0.700 eryt=0.491 papu=0.452 exco=0.447 lich=0.598
+    ±1 : seve=0.990 eryt=0.950 papu=0.935 exco=0.855 lich=0.960   acc: seve=0.625 eryt=0.595 papu=0.485 exco=0.500 lich=0.660
+[done] /home/work/ogw/classification_crop/runs/M2_ccnnit_s43  val_best=0.643  test_score=0.598 (test_mean_QWK=0.538)
+
+###### M2 baseline 완료: 성공 4 / 실패 0 ######
+--- M2_ccnnit_s42
+exp=bbox model=pvtv2b0 imgsz=512 epochs=100 loss=corn mtl=uncertainty margin=0.15 ibb=1 ibb_alpha=0.5->None cap=4.0 edge_v=0.25 step2_ratio=1.0 step1_mult=1.0 edge_loss=pair warmup=3 pairwise=1 w_nodes=0.1 unary=nll cut=25.0 shared=True decode=joint edges=4
+stopped_epoch=99 best_epoch=79 val_best_score=0.6494 test_score=0.6073 test_mean_qwk=0.5551
+--- M2_ccnnit_s43
+exp=bbox model=pvtv2b0 imgsz=512 epochs=100 loss=corn mtl=uncertainty margin=0.15 ibb=1 ibb_alpha=0.5->None cap=4.0 edge_v=0.25 step2_ratio=1.0 step1_mult=1.0 edge_loss=pair warmup=3 pairwise=1 w_nodes=0.1 unary=nll cut=25.0 shared=True decode=joint edges=4
+stopped_epoch=49 best_epoch=29 val_best_score=0.6428 test_score=0.5984 test_mean_qwk=0.5376
+--- M2_ocnnit_s42
+exp=bbox model=pvtv2b0 imgsz=512 epochs=100 loss=corn mtl=uncertainty margin=0.15 ibb=1 ibb_alpha=0.5->None cap=4.0 edge_v=0.25 step2_ratio=0.5 step1_mult=1.0 edge_loss=pair warmup=3 pairwise=0
+stopped_epoch=25 best_epoch=5 val_best_score=0.6487 test_score=0.5863 test_mean_qwk=0.5443
+--- M2_ocnnit_s43
+exp=bbox model=pvtv2b0 imgsz=512 epochs=100 loss=corn mtl=uncertainty margin=0.15 ibb=1 ibb_alpha=0.5->None cap=4.0 edge_v=0.25 step2_ratio=0.5 step1_mult=1.0 edge_loss=pair warmup=3 pairwise=0
+stopped_epoch=34 best_epoch=14 val_best_score=0.6433 test_score=0.5975 test_mean_qwk=0.5466

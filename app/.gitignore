@@ -1,0 +1,47 @@
+# ============================================================
+# Python (virtualenv / cache) — regenerate with requirements.txt
+# ============================================================
+.venv/
+__pycache__/
+*.pyc
+
+# ============================================================
+# Node / Expo — regenerate with npm install
+# ============================================================
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+npm-debug.*
+yarn-error.*
+
+# ============================================================
+# Runtime-generated files / personal data (app-uploaded photos, SQLite DB)
+# ============================================================
+server/dermascan.db
+server/data/captures/
+
+# ============================================================
+# Large assets — store separately (e.g. Google Drive) rather than GitHub
+#   model weights (*.pth), training/evaluation datasets
+# ============================================================
+model/*.pth
+SkinDisNet_balanced/
+
+# ============================================================
+# Secrets / local config — copy *.example.* and fill in your real keys (do not commit)
+# ============================================================
+server/config.py
+dermascan-app/src/config.js
+
+# ============================================================
+# Editor / local tooling
+# ============================================================
+.vscode/
+.claude/
+.DS_Store
+
+# 온디바이스 tflite 는 체크포인트에서 생성되는 산출물(용량 큼) -> git 제외.
+#   재생성:  python app/model/export_tflite.py --batch
+dermascan-app/assets/models/*.tflite
